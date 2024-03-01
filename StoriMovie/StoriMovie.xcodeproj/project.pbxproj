@@ -20,6 +20,8 @@
 		86EB7E622B928EF500EBF28C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E5E2B928EF500EBF28C /* Image.swift */; };
 		86EB7E632B928EF500EBF28C /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E5F2B928EF500EBF28C /* MovieResponse.swift */; };
 		86EB7E642B928EF500EBF28C /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E602B928EF500EBF28C /* ImageResponse.swift */; };
+		86EB7E682B928F4100EBF28C /* RestClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E662B928F4100EBF28C /* RestClientService.swift */; };
+		86EB7E692B928F4100EBF28C /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E672B928F4100EBF28C /* URLRequestBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		86EB7E5E2B928EF500EBF28C /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		86EB7E5F2B928EF500EBF28C /* MovieResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		86EB7E602B928EF500EBF28C /* ImageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
+		86EB7E662B928F4100EBF28C /* RestClientService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClientService.swift; sourceTree = "<group>"; };
+		86EB7E672B928F4100EBF28C /* URLRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		86EB7E252B92856700EBF28C /* StoriMovie */ = {
 			isa = PBXGroup;
 			children = (
+				86EB7E652B928F4100EBF28C /* Service */,
 				86EB7E5C2B928EF500EBF28C /* Model */,
 				86EB7E582B9285DF00EBF28C /* App */,
 				86EB7E592B9285EC00EBF28C /* ViewController */,
@@ -177,6 +182,15 @@
 				86EB7E602B928EF500EBF28C /* ImageResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		86EB7E652B928F4100EBF28C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				86EB7E662B928F4100EBF28C /* RestClientService.swift */,
+				86EB7E672B928F4100EBF28C /* URLRequestBuilder.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,7 +324,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86EB7E682B928F4100EBF28C /* RestClientService.swift in Sources */,
 				86EB7E2B2B92856700EBF28C /* ViewController.swift in Sources */,
+				86EB7E692B928F4100EBF28C /* URLRequestBuilder.swift in Sources */,
 				86EB7E272B92856700EBF28C /* AppDelegate.swift in Sources */,
 				86EB7E642B928EF500EBF28C /* ImageResponse.swift in Sources */,
 				86EB7E612B928EF500EBF28C /* Movie.swift in Sources */,
