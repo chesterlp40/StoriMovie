@@ -52,6 +52,7 @@ class RestClientService {
         _ data: Data
     ) throws -> T {
         let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         let result = try decoder.decode(
             T.self,
             from: data
