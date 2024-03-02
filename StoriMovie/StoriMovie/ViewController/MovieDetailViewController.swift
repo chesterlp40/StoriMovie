@@ -35,7 +35,7 @@ class MovieDetailViewController: UIViewController {
     
     private func setupAllComponents() {
         self.navigationItem.title = "Movie Detail View"
-        self.view.backgroundColor = UIColor.whiteGrained
+        self.view.backgroundColor = UIColor.grain200
         Helper.setNavigationConfig(
             self.navigationController
         )
