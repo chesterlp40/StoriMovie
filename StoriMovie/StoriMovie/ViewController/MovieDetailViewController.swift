@@ -9,6 +9,7 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
     @IBOutlet weak var posterMovie: UIImageView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleMovieLabel: UILabel!
     @IBOutlet weak var overviewMovieLabel: UILabel!
     @IBOutlet weak var releaseDateMovieLabel: UILabel!
@@ -40,10 +41,18 @@ class MovieDetailViewController: UIViewController {
             self.navigationController
         )
         self.fetchPosterAndSetImage()
+        self.posterMovie.layer.cornerRadius = 5
+        self.posterMovie.layer.borderColor = UIColor.grain400.cgColor
+        self.posterMovie.layer.borderWidth = 2
+        self.posterMovie.contentMode = .scaleToFill
+        self.posterMovie.clipsToBounds = true
+        self.contentView.layer.cornerRadius = 5
+        self.contentView.layer.borderColor = UIColor.grain500.cgColor
+        self.contentView.layer.borderWidth = 2
         self.titleMovieLabel.text = self.movie.title
         self.overviewMovieLabel.text = self.movie.overview
-        self.releaseDateMovieLabel.text = self.movie.releaseDate
-        self.ratingMovieLabel.text = self.movie.voteAverage.description
+        self.releaseDateMovieLabel.text = "Released: \(self.movie.releaseDate)"
+        self.ratingMovieLabel.text = "Rated: \(self.movie.voteAverage.description)"
     }
     
     private func fetchPosterAndSetImage() {
@@ -52,9 +61,6 @@ class MovieDetailViewController: UIViewController {
                 self.posterMovie.image = try await RestClientService.shared.fetchImages(
                     with: self.movie.posterPath
                 )
-                self.posterMovie.frame = view.bounds
-                self.posterMovie.contentMode = .scaleToFill
-                self.posterMovie.clipsToBounds = true
             } catch {
                 throw error
             }
