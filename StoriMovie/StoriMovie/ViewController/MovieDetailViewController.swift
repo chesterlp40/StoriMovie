@@ -9,6 +9,7 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
     @IBOutlet weak var posterMovie: UIImageView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleMovieLabel: UILabel!
     @IBOutlet weak var overviewMovieLabel: UILabel!
@@ -40,6 +41,8 @@ class MovieDetailViewController: UIViewController {
         Helper.setNavigationConfig(
             self.navigationController
         )
+        self.activityIndicatorView.hidesWhenStopped = true
+        self.activityIndicatorView.startAnimating()
         self.fetchPosterAndSetImage()
         self.posterMovie.layer.cornerRadius = 5
         self.posterMovie.layer.borderColor = UIColor.grain400.cgColor
@@ -61,8 +64,11 @@ class MovieDetailViewController: UIViewController {
                 self.posterMovie.image = try await RestClientService.shared.fetchImages(
                     with: self.movie.posterPath
                 )
+                self.posterMovie.contentMode = .scaleToFill
+                self.activityIndicatorView.stopAnimating()
             } catch {
-                throw error
+                self.posterMovie.image = UIImage(named: "wifi.exclamation")
+                self.activityIndicatorView.stopAnimating()
             }
         }
     }

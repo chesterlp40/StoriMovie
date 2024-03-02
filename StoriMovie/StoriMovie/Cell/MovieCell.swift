@@ -11,19 +11,24 @@ class MovieCell: UITableViewCell {
     static let reuseIdentifier = "MovieCell"
     
     @IBOutlet weak var imageMovie: UIImageView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var titleMovieLabel: UILabel!
     @IBOutlet weak var releaseDateMovieLabel: UILabel!
     
     func configure(
         with movie: Movie
     ) {
+        self.activityIndicatorView.hidesWhenStopped = true
+        self.activityIndicatorView.startAnimating()
         Task {
             do {
                 self.imageMovie.image = try await RestClientService.shared.fetchImages(
                     with: movie.backdropPath
                 )
+                self.activityIndicatorView.stopAnimating()
             } catch {
-                throw error
+                self.imageMovie.image = UIImage(named: "wifi.exclamation")
+                self.activityIndicatorView.stopAnimating()
             }
         }
         self.titleMovieLabel.text = movie.title

@@ -35,21 +35,21 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" name="Grain300"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="117" id="Wt2-75-r8u" customClass="MovieCell" customModule="StoriMovie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="117"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="90" id="Wt2-75-r8u" customClass="MovieCell" customModule="StoriMovie" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wt2-75-r8u" id="ZKy-bH-8JT">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="117"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zqd-gI-Pf4">
-                                                    <rect key="frame" x="10" y="10" width="160" height="97"/>
+                                                    <rect key="frame" x="10" y="10" width="160" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="160" id="d3e-Nw-P7C"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iT-u2-3wL">
-                                                    <rect key="frame" x="180" y="62" width="118" height="45"/>
+                                                    <rect key="frame" x="180" y="35" width="118" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="DSo-Rb-QXg"/>
                                                     </constraints>
@@ -64,18 +64,27 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lro-Wn-GnS">
-                                                    <rect key="frame" x="358" y="79" width="20" height="26.333333333333329"/>
+                                                    <rect key="frame" x="358" y="52.000000000000007" width="20" height="26.333333333333336"/>
                                                     <color key="tintColor" name="Grain800"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Iyi-RS-oFr"/>
                                                         <constraint firstAttribute="width" constant="20" id="qCV-Ha-bpM"/>
                                                     </constraints>
                                                 </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="uJ2-Vd-XM9">
+                                                    <rect key="frame" x="75" y="30" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="2W1-tB-tiA"/>
+                                                        <constraint firstAttribute="width" constant="30" id="qPx-cd-7E2"/>
+                                                    </constraints>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="oYY-d9-Bg9" firstAttribute="top" secondItem="ZKy-bH-8JT" secondAttribute="top" constant="10" id="6c1-wS-KTE"/>
                                                 <constraint firstAttribute="trailing" secondItem="Lro-Wn-GnS" secondAttribute="trailing" constant="15" id="7hY-bz-5Ii"/>
                                                 <constraint firstItem="zqd-gI-Pf4" firstAttribute="top" secondItem="ZKy-bH-8JT" secondAttribute="top" constant="10" id="EhH-Lw-yFG"/>
+                                                <constraint firstItem="uJ2-Vd-XM9" firstAttribute="centerX" secondItem="zqd-gI-Pf4" secondAttribute="centerX" id="Elf-qe-7fv"/>
+                                                <constraint firstItem="uJ2-Vd-XM9" firstAttribute="centerY" secondItem="zqd-gI-Pf4" secondAttribute="centerY" id="FYp-gN-8BZ"/>
                                                 <constraint firstAttribute="trailing" secondItem="oYY-d9-Bg9" secondAttribute="trailing" constant="10" id="LaQ-ti-lKl"/>
                                                 <constraint firstItem="Lro-Wn-GnS" firstAttribute="leading" secondItem="5iT-u2-3wL" secondAttribute="trailing" constant="60" id="TbV-aQ-Kn4"/>
                                                 <constraint firstAttribute="bottom" secondItem="Lro-Wn-GnS" secondAttribute="bottom" constant="10" id="W90-OP-Nh3"/>
@@ -89,6 +98,7 @@
                                         <color key="backgroundColor" name="Grain200"/>
                                         <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                         <connections>
+                                            <outlet property="activityIndicatorView" destination="uJ2-Vd-XM9" id="Jyq-Vn-VGe"/>
                                             <outlet property="imageMovie" destination="zqd-gI-Pf4" id="8Tr-Yv-1GM"/>
                                             <outlet property="releaseDateMovieLabel" destination="5iT-u2-3wL" id="aW1-u4-Sut"/>
                                             <outlet property="titleMovieLabel" destination="oYY-d9-Bg9" id="3HY-BU-1dt"/>
@@ -126,36 +136,36 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVE-B6-1WA" userLabel="ContentView">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v3N-3s-6tm">
-                                        <rect key="frame" x="10" y="10" width="373" height="543"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi.exclamation" translatesAutoresizingMaskIntoConstraints="NO" id="v3N-3s-6tm">
+                                        <rect key="frame" x="10" y="10" width="373" height="460"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="460" id="aU4-Jj-YOl"/>
+                                        </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGb-r0-5TN">
-                                        <rect key="frame" x="20" y="525" width="353" height="224"/>
+                                        <rect key="frame" x="20" y="440" width="353" height="309"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Godfather" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmS-UR-YL4">
-                                                <rect key="frame" x="10" y="5" width="333" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="ZfA-S3-bqh"/>
-                                                </constraints>
+                                                <rect key="frame" x="10" y="5.0000000000000018" width="333" height="28.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="24"/>
                                                 <color key="textColor" name="Grain500"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9d-GV-4HA">
-                                                <rect key="frame" x="10" y="40.000000000000007" width="333" height="124.66666666666669"/>
+                                                <rect key="frame" x="10" y="38.666666666666636" width="333" height="124.66666666666669"/>
                                                 <string key="text">Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.</string>
                                                 <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="15"/>
                                                 <color key="textColor" name="Grain800"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Released: 1972-03-14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TI-kS-VVy">
-                                                <rect key="frame" x="10" y="169.66666666666663" width="333" height="20.333333333333343"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Released: 1972-03-14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TI-kS-VVy">
+                                                <rect key="frame" x="10" y="168.33333333333337" width="333" height="106.66666666666669"/>
                                                 <fontDescription key="fontDescription" name="Rubik-MediumItalic" family="Rubik" pointSize="17"/>
                                                 <color key="textColor" name="Grain400"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rated: 8.695" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kV-Te-05o">
-                                                <rect key="frame" x="10" y="195" width="333" height="24"/>
+                                                <rect key="frame" x="10" y="280" width="333" height="24"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
                                                 <color key="textColor" name="Grain800"/>
                                                 <nil key="highlightedColor"/>
@@ -178,12 +188,21 @@
                                             <constraint firstAttribute="trailing" secondItem="8kV-Te-05o" secondAttribute="trailing" constant="10" id="y8Z-21-i5X"/>
                                         </constraints>
                                     </view>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="3fF-31-iTC">
+                                        <rect key="frame" x="166.66666666666666" y="210" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="9zq-1o-L3V"/>
+                                            <constraint firstAttribute="height" constant="60" id="qjA-lb-IDD"/>
+                                        </constraints>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" name="Grain300"/>
                                 <constraints>
+                                    <constraint firstItem="3fF-31-iTC" firstAttribute="centerX" secondItem="v3N-3s-6tm" secondAttribute="centerX" id="Bcz-Ub-DUb"/>
                                     <constraint firstItem="v3N-3s-6tm" firstAttribute="top" secondItem="BVE-B6-1WA" secondAttribute="top" constant="10" id="FQk-6q-ZIS"/>
-                                    <constraint firstItem="pGb-r0-5TN" firstAttribute="top" secondItem="v3N-3s-6tm" secondAttribute="bottom" constant="-28" id="TEa-KQ-bQO"/>
+                                    <constraint firstItem="pGb-r0-5TN" firstAttribute="top" secondItem="v3N-3s-6tm" secondAttribute="bottom" constant="-30" id="TEa-KQ-bQO"/>
                                     <constraint firstAttribute="trailing" secondItem="v3N-3s-6tm" secondAttribute="trailing" constant="10" id="URp-Qg-Czu"/>
+                                    <constraint firstItem="3fF-31-iTC" firstAttribute="centerY" secondItem="v3N-3s-6tm" secondAttribute="centerY" id="b1j-by-GfJ"/>
                                     <constraint firstAttribute="trailing" secondItem="pGb-r0-5TN" secondAttribute="trailing" constant="20" id="h71-N6-fY5"/>
                                     <constraint firstItem="v3N-3s-6tm" firstAttribute="leading" secondItem="BVE-B6-1WA" secondAttribute="leading" constant="10" id="lrk-Dm-bj1"/>
                                     <constraint firstAttribute="bottom" secondItem="pGb-r0-5TN" secondAttribute="bottom" constant="10" id="ox5-99-XaP"/>
@@ -201,6 +220,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="3fF-31-iTC" id="zek-xg-URc"/>
                         <outlet property="contentView" destination="pGb-r0-5TN" id="Mzl-0f-u7m"/>
                         <outlet property="overviewMovieLabel" destination="o9d-GV-4HA" id="2Ap-E2-Ofb"/>
                         <outlet property="posterMovie" destination="v3N-3s-6tm" id="9gZ-TZ-hE0"/>
@@ -211,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wop-df-Imq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3773" y="-2"/>
+            <point key="canvasLocation" x="3771.7557251908397" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Ew-vD-lcF">
@@ -234,6 +254,7 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="wifi.exclamation" width="22.48699951171875" height="18.427700042724609"/>
         <namedColor name="Grain100">
             <color red="0.95294117647058818" green="0.96078431372549022" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
