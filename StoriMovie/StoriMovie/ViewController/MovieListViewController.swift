@@ -7,11 +7,16 @@
 
 import UIKit
 
-class MovieListViewController: UITableViewController {
+class MovieListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var viewModel = MovieViewModel()
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.navigationItem.title = "Top Rated Movies"
         Task {
             do {
                 try await self.fetchData()
@@ -28,31 +33,54 @@ class MovieListViewController: UITableViewController {
         }
     }
     
-    override func tableView(
+    func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
         return self.viewModel.movieCount
     }
     
-    override func tableView(
+    func tableView(
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let movie = self.viewModel.getMovie(at: indexPath.row)
-        // let images = self.viewModel.getImages(for: movie.id)
-        cell.textLabel?.text = movie.title
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: MovieCell.reuseIdentifier,
+            for: indexPath
+        ) as! MovieCell
+        let movie = self.viewModel.getMovie(
+            at: indexPath.row
+        )
+        cell.configure(with: movie)
         return cell
     }
     
-    override func tableView(
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+    }
+    
+    func tableView(
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
+        let movie = self.viewModel.getMovie(
+            at: indexPath.row
+        )
+        let bundle = Bundle(for: MovieDetailViewController.self)
+        let storyboard = UIStoryboard(
+            name: "Main",
+            bundle: bundle
+        )
+        let movieDetailViewController = storyboard.instantiateViewController(identifier: "MovieDetailViewController") { coder in
+            MovieDetailViewController(coder: coder, movie: movie)
+        }
+        self.navigationController?.pushViewController(
+            movieDetailViewController,
+            animated: true
+        )
     }
     
-    override func tableView(
+    func tableView(
         _ tableView: UITableView,
         willDisplay cell: UITableViewCell,
         forRowAt indexPath: IndexPath

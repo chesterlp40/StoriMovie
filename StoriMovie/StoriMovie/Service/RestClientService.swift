@@ -5,7 +5,7 @@
 //  Created by Ezequiel Rasgido on 29/02/2024.
 //
 
-import Foundation
+import UIKit
 
 class RestClientService {
     static let shared = RestClientService()
@@ -14,7 +14,7 @@ class RestClientService {
         page: Int
     ) async throws -> [Movie] {
         guard
-            let request = URLRequestBuilder(path: "/top_rated")
+            let request = URLRequestBuilder(.movieRequest)
                 .setPage(page)
                 .build()
         else {
@@ -30,22 +30,24 @@ class RestClientService {
     }
     
     func fetchImages(
-        from id: Int
-    ) async throws -> [Image] {
-        let path = "/\(id.description)/images"
+        with path: String
+    ) async throws -> UIImage? {
         guard
-            let request = URLRequestBuilder(path: path)
+            let request = URLRequestBuilder(.imageRequest)
+                .setImagePath(path)
                 .build()
         else {
             throw RestClientServiceError.invalidRequest
         }
         do {
             let (data, _) = try await URLSession.shared.data(for: request)
-            let result: ImageResponse = try self.parse(data)
-            return result.backdrops
+            if let image = UIImage(data: data) {
+                return image
+            }
         } catch {
             throw RestClientServiceError.networkingError
         }
+        return nil
     }
     
     private func parse<T: Decodable>(

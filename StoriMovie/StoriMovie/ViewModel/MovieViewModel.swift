@@ -9,7 +9,6 @@ import UIKit
 
 class MovieViewModel {
     private var movies: [Movie] = []
-    private var imagesByMovieId: [Int: [Image]] = [:]
     private var currentPage = 1
     
     var movieCount: Int {
@@ -22,12 +21,6 @@ class MovieViewModel {
         return self.movies[index]
     }
     
-    func getImages(
-        for movieId: Int
-    ) -> [Image]? {
-        return self.imagesByMovieId[movieId]
-    }
-    
     func fetchData() async throws {
         do {
             let newMovies = try await RestClientService.shared.fetchMovies(
@@ -35,12 +28,6 @@ class MovieViewModel {
             )
             self.movies += newMovies
             self.currentPage += 1
-            for movie in newMovies {
-                let images = try await RestClientService.shared.fetchImages(
-                    from: movie.id
-                )
-                self.imagesByMovieId[movie.id] = images
-            }
         } catch {
             throw error
         }

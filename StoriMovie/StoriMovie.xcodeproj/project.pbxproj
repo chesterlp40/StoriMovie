@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8692A64A2B92DB7F009105D8 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8692A6492B92DB7F009105D8 /* MovieDetailViewController.swift */; };
 		86EB7E272B92856700EBF28C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E262B92856700EBF28C /* AppDelegate.swift */; };
 		86EB7E292B92856700EBF28C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E282B92856700EBF28C /* SceneDelegate.swift */; };
 		86EB7E2B2B92856700EBF28C /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E2A2B92856700EBF28C /* MovieListViewController.swift */; };
@@ -23,6 +24,7 @@
 		86EB7E682B928F4100EBF28C /* RestClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E662B928F4100EBF28C /* RestClientService.swift */; };
 		86EB7E692B928F4100EBF28C /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E672B928F4100EBF28C /* URLRequestBuilder.swift */; };
 		86EB7E6C2B9295A300EBF28C /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E6B2B9295A300EBF28C /* MovieViewModel.swift */; };
+		86EB7E722B92A0FF00EBF28C /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E712B92A0FF00EBF28C /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8692A6492B92DB7F009105D8 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		86EB7E232B92856700EBF28C /* StoriMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoriMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EB7E262B92856700EBF28C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86EB7E282B92856700EBF28C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 		86EB7E662B928F4100EBF28C /* RestClientService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClientService.swift; sourceTree = "<group>"; };
 		86EB7E672B928F4100EBF28C /* URLRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
 		86EB7E6B2B9295A300EBF28C /* MovieViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		86EB7E712B92A0FF00EBF28C /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 		86EB7E252B92856700EBF28C /* StoriMovie */ = {
 			isa = PBXGroup;
 			children = (
+				86EB7E702B92A0D600EBF28C /* Cell */,
 				86EB7E6A2B9295A300EBF28C /* ViewModel */,
 				86EB7E652B928F4100EBF28C /* Service */,
 				86EB7E5C2B928EF500EBF28C /* Model */,
@@ -172,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				86EB7E2A2B92856700EBF28C /* MovieListViewController.swift */,
+				8692A6492B92DB7F009105D8 /* MovieDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -202,6 +208,14 @@
 				86EB7E6B2B9295A300EBF28C /* MovieViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		86EB7E702B92A0D600EBF28C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				86EB7E712B92A0FF00EBF28C /* MovieCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +352,8 @@
 				86EB7E682B928F4100EBF28C /* RestClientService.swift in Sources */,
 				86EB7E6C2B9295A300EBF28C /* MovieViewModel.swift in Sources */,
 				86EB7E2B2B92856700EBF28C /* MovieListViewController.swift in Sources */,
+				86EB7E722B92A0FF00EBF28C /* MovieCell.swift in Sources */,
+				8692A64A2B92DB7F009105D8 /* MovieDetailViewController.swift in Sources */,
 				86EB7E692B928F4100EBF28C /* URLRequestBuilder.swift in Sources */,
 				86EB7E272B92856700EBF28C /* AppDelegate.swift in Sources */,
 				86EB7E642B928EF500EBF28C /* ImageResponse.swift in Sources */,

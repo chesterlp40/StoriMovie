@@ -8,19 +8,42 @@
 import Foundation
 
 class URLRequestBuilder {
-    private let baseURL = "https://api.themoviedb.org/3/movie"
+    private let moviesBaseURL = "https://api.themoviedb.org/3/movie/top_rated"
+    private let imagesBaseURL = "https://image.tmdb.org/t/p/original"
     private let pageKey = "page"
-    private let headers = [
-      "accept": "application/json",
-      "Authorization": "Bearer TOKEN"
-    ]
-    private(set) var path: String
-    private(set) var page: Int? = nil
+    private let token = "TOKEN"
+
+    private let timeOut = 10.0
+    private(set) var requestData: RequestData = .movieRequest
+    private(set) var imagePath: String = ""
+    private(set) var page: Int = 1
+    
+    enum RequestData: String {
+        case movieRequest
+        case imageRequest
+    }
+    
+    private enum KeyHeader: String {
+        case Authorization = "Authorization"
+        case accept = "accept"
+    }
+    
+    private enum RequestMethod: String {
+        case get = "GET"
+    }
     
     init(
-        path: String
+        _ requestData: RequestData
     ) {
-        self.path = path
+        self.requestData = requestData
+    }
+    
+    @discardableResult
+    func setImagePath(
+        _ imagePath: String
+    ) -> URLRequestBuilder {
+        self.imagePath = imagePath
+        return self
     }
     
     @discardableResult
@@ -32,21 +55,28 @@ class URLRequestBuilder {
     }
     
     func build() -> URLRequest? {
-        let fullUrl = self.baseURL + self.path
+        var urlString: String?
+        switch self.requestData {
+        case .movieRequest:
+            urlString = "\(self.moviesBaseURL)"
+        case .imageRequest:
+            urlString = "\(self.imagesBaseURL)\(self.imagePath)"
+        }
         guard
-            let safeBaseUrl = URL(string: fullUrl),
+            let safeUrlString = urlString,
+            let safeUrl = URL(string: safeUrlString),
             var urlComponents = URLComponents(
-                url: safeBaseUrl,
+                url: safeUrl,
                 resolvingAgainstBaseURL: false
             )
         else {
             return nil
         }
-        if let safePage = self.page?.description {
+        if self.requestData == .movieRequest {
             var queryItems = urlComponents.queryItems ?? []
             let pageItem = URLQueryItem(
                 name: self.pageKey,
-                value: safePage
+                value: self.page.description
             )
             queryItems.append(pageItem)
             urlComponents.queryItems = queryItems
@@ -59,10 +89,18 @@ class URLRequestBuilder {
         var request = URLRequest(
             url: safeUrl,
             cachePolicy: .useProtocolCachePolicy,
-            timeoutInterval: 10.0
+            timeoutInterval: self.timeOut
         )
-        request.httpMethod = "GET"
-        request.allHTTPHeaderFields = self.headers
+        request.httpMethod = RequestMethod.get.rawValue
+        var headers = [KeyHeader: String]()
+        headers[.Authorization] = "Bearer \(self.token)"
+        headers[.accept] = "application/json"
+        for header in headers {
+            request.setValue(
+                header.value,
+                forHTTPHeaderField: header.key.rawValue
+            )
+        }
         return request
     }
 }
