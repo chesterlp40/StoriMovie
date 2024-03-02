@@ -19,7 +19,9 @@ class MovieCell: UITableViewCell {
     ) {
         Task {
             do {
-                self.imageMovie.image = try await RestClientService.shared.fetchImages(with: movie.backdropPath)
+                self.imageMovie.image = try await RestClientService.shared.fetchImages(
+                    with: movie.backdropPath
+                )
             } catch {
                 throw error
             }

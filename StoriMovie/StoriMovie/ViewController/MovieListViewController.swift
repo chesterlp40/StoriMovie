@@ -14,9 +14,17 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupAllComponents()
+    }
+    
+    private func setupAllComponents() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.navigationItem.title = "Top Rated Movies"
+        self.view.backgroundColor = .black
+        Helper.setNavigationConfig(
+            self.navigationController
+        )
         Task {
             do {
                 try await self.fetchData()
@@ -28,8 +36,8 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func fetchData() async throws {
         try await self.viewModel.fetchData()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
         }
     }
     
@@ -55,8 +63,11 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+    func tableView(
+        _ tableView: UITableView,
+        heightForRowAt indexPath: IndexPath
+    ) -> CGFloat {
+        return 140
     }
     
     func tableView(

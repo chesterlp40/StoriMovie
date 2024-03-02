@@ -30,11 +30,15 @@ class MovieDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupAllComponent()
+        self.setupAllComponents()
     }
     
-    private func setupAllComponent() {
+    private func setupAllComponents() {
         self.navigationItem.title = "Movie Detail View"
+        self.view.backgroundColor = .black
+        Helper.setNavigationConfig(
+            self.navigationController
+        )
         self.fetchPosterAndSetImage()
         self.titleMovieLabel.text = self.movie.title
         self.overviewMovieLabel.text = self.movie.overview
@@ -48,6 +52,9 @@ class MovieDetailViewController: UIViewController {
                 self.posterMovie.image = try await RestClientService.shared.fetchImages(
                     with: self.movie.posterPath
                 )
+                self.posterMovie.frame = view.bounds
+                self.posterMovie.contentMode = .scaleAspectFill
+                self.posterMovie.clipsToBounds = true
             } catch {
                 throw error
             }
