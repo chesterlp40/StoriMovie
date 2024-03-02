@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -114,53 +115,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6z8-Qy-yPb">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="517"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="E6j-Ej-QvX">
-                                <rect key="frame" x="16" y="502" width="361" height="300"/>
+                                <rect key="frame" x="16" y="561" width="361" height="241"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Godfather" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmS-UR-YL4">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="4hv-6g-ih1"/>
+                                            <constraint firstAttribute="height" constant="30" id="4hv-6g-ih1"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Rubik-SemiBoldItalic" family="Rubik" pointSize="17"/>
-                                        <color key="textColor" red="0.84172964100000003" green="0.91469925640000005" blue="0.7242552042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Rubik-SemiBoldItalic" family="Rubik" pointSize="23"/>
+                                        <color key="textColor" name="GrainLight"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9d-GV-4HA">
-                                        <rect key="frame" x="0.0" y="57" width="361" height="129"/>
+                                        <rect key="frame" x="0.0" y="42" width="361" height="125"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="129" id="7YF-0P-m0V"/>
+                                            <constraint firstAttribute="height" constant="125" id="7YF-0P-m0V"/>
                                         </constraints>
                                         <string key="text">Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.</string>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
-                                        <color key="textColor" red="0.84172964100000003" green="0.91469925640000005" blue="0.7242552042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="GrainDarker"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1972-03-14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TI-kS-VVy">
-                                        <rect key="frame" x="0.0" y="198" width="361" height="45"/>
+                                        <rect key="frame" x="0.0" y="179" width="361" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="RAq-SQ-vRr"/>
+                                            <constraint firstAttribute="height" constant="25" id="RAq-SQ-vRr"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="17"/>
-                                        <color key="textColor" red="0.84172964100000003" green="0.91469925640000005" blue="0.7242552042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="GrainLight"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.695" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kV-Te-05o">
-                                        <rect key="frame" x="0.0" y="255" width="361" height="45"/>
+                                        <rect key="frame" x="0.0" y="216" width="361" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="KOy-YU-BEL"/>
+                                            <constraint firstAttribute="height" constant="25" id="KOy-YU-BEL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
-                                        <color key="textColor" red="0.84172964100000003" green="0.91469925640000005" blue="0.7242552042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="GrainLightest"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30308360927152317" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="cOP-hh-aLL"/>
-                                </constraints>
+                                <color key="backgroundColor" name="WhiteGrained"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IJi-MG-Q5j"/>
@@ -169,8 +167,8 @@
                             <constraint firstItem="6z8-Qy-yPb" firstAttribute="leading" secondItem="IJi-MG-Q5j" secondAttribute="leading" id="Ji8-e2-0cX"/>
                             <constraint firstItem="6z8-Qy-yPb" firstAttribute="top" secondItem="IJi-MG-Q5j" secondAttribute="top" id="LYV-wU-5Zg"/>
                             <constraint firstItem="IJi-MG-Q5j" firstAttribute="trailing" secondItem="6z8-Qy-yPb" secondAttribute="trailing" id="Lp6-H8-Fyk"/>
+                            <constraint firstItem="E6j-Ej-QvX" firstAttribute="top" secondItem="6z8-Qy-yPb" secondAttribute="bottom" constant="-15" id="O6L-iV-duH"/>
                             <constraint firstItem="E6j-Ej-QvX" firstAttribute="leading" secondItem="IJi-MG-Q5j" secondAttribute="leading" constant="16" id="UT5-6h-3hn"/>
-                            <constraint firstItem="IJi-MG-Q5j" firstAttribute="bottom" secondItem="6z8-Qy-yPb" secondAttribute="bottom" id="bC5-w0-QeO"/>
                             <constraint firstItem="IJi-MG-Q5j" firstAttribute="trailing" secondItem="E6j-Ej-QvX" secondAttribute="trailing" constant="16" id="eII-Ar-7f6"/>
                             <constraint firstItem="IJi-MG-Q5j" firstAttribute="bottom" secondItem="E6j-Ej-QvX" secondAttribute="bottom" constant="16" id="n2t-Ab-92c"/>
                         </constraints>
@@ -207,6 +205,18 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="GrainDarker">
+            <color red="0.20000000000000001" green="0.38039215686274508" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GrainLight">
+            <color red="0.59999999999999998" green="0.69019607843137254" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GrainLightest">
+            <color red="0.80000000000000004" green="0.84705882352941175" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="WhiteGrained">
+            <color red="0.90196078431372551" green="0.92156862745098034" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

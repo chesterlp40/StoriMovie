@@ -12,11 +12,11 @@ final class Helper {
         _ navigation: UINavigationController?
     ) {
         navigation?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont(name: "Rubik-SemiBoldItalic", size: 17) ?? UIFont.boldSystemFont(ofSize: 17)
+            NSAttributedString.Key.foregroundColor: UIColor.grainDark,
+            NSAttributedString.Key.font: UIFont(name: "Rubik-SemiBold", size: 17) ?? UIFont.boldSystemFont(ofSize: 17)
         ]
         navigation?.navigationBar.isTranslucent = true
-        navigation?.navigationBar.tintColor = .white
-        navigation?.navigationBar.backgroundColor = .black
+        navigation?.navigationBar.tintColor = UIColor.grainDark
+        navigation?.navigationBar.backgroundColor = UIColor.whiteGrained
     }
 }

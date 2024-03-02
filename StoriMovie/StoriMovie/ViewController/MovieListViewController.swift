@@ -21,7 +21,7 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.navigationItem.title = "Top Rated Movies"
-        self.view.backgroundColor = .black
+        self.view.backgroundColor = UIColor.whiteGrained
         Helper.setNavigationConfig(
             self.navigationController
         )

@@ -35,7 +35,7 @@ class MovieDetailViewController: UIViewController {
     
     private func setupAllComponents() {
         self.navigationItem.title = "Movie Detail View"
-        self.view.backgroundColor = .black
+        self.view.backgroundColor = UIColor.whiteGrained
         Helper.setNavigationConfig(
             self.navigationController
         )
@@ -53,7 +53,7 @@ class MovieDetailViewController: UIViewController {
                     with: self.movie.posterPath
                 )
                 self.posterMovie.frame = view.bounds
-                self.posterMovie.contentMode = .scaleAspectFill
+                self.posterMovie.contentMode = .scaleToFill
                 self.posterMovie.clipsToBounds = true
             } catch {
                 throw error
