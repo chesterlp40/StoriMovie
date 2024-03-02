@@ -14,9 +14,9 @@ class URLRequestBuilder {
     private let token = "TOKEN"
 
     private let timeOut = 10.0
-    private(set) var requestData: RequestData = .movieRequest
-    private(set) var imagePath: String = ""
-    private(set) var page: Int = 1
+    private var requestData: RequestData = .movieRequest
+    private var imagePath: String = ""
+    private var page: Int = 1
     
     enum RequestData: String {
         case movieRequest
