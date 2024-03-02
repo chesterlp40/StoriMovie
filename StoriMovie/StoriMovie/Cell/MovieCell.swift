@@ -27,6 +27,10 @@ class MovieCell: UITableViewCell {
             }
         }
         self.titleMovieLabel.text = movie.title
-        self.releaseDateMovieLabel.text = movie.releaseDate
+        self.releaseDateMovieLabel.text = "Released:\n\(movie.releaseDate)"
+        self.imageMovie.layer.cornerRadius = 5
+        self.layer.cornerRadius = 10
+        self.layer.borderColor = UIColor.grain400.cgColor
+        self.layer.borderWidth = 2
     }
 }

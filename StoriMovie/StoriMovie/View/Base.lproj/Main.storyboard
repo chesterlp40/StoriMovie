@@ -31,54 +31,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="76O-W7-ilX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="76O-W7-ilX">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="Grain300"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="143" id="Wt2-75-r8u" customClass="MovieCell" customModule="StoriMovie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="143"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="117" id="Wt2-75-r8u" customClass="MovieCell" customModule="StoriMovie" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="117"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wt2-75-r8u" id="ZKy-bH-8JT">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="143"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="117"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zqd-gI-Pf4">
-                                                    <rect key="frame" x="10" y="10" width="160" height="123"/>
+                                                    <rect key="frame" x="10" y="10" width="160" height="97"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="160" id="d3e-Nw-P7C"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iT-u2-3wL">
-                                                    <rect key="frame" x="180" y="83" width="203" height="35"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iT-u2-3wL">
+                                                    <rect key="frame" x="180" y="62" width="118" height="45"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="DSo-Rb-QXg"/>
+                                                        <constraint firstAttribute="height" constant="45" id="DSo-Rb-QXg"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="17"/>
+                                                    <color key="textColor" name="Grain500"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYY-d9-Bg9">
-                                                    <rect key="frame" x="180" y="25" width="203" height="35"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="9Eg-F6-m8U"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Godfather" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYY-d9-Bg9">
+                                                    <rect key="frame" x="180" y="10" width="203" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Rubik-SemiBoldItalic" family="Rubik" pointSize="20"/>
+                                                    <color key="textColor" name="Grain900"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lro-Wn-GnS">
+                                                    <rect key="frame" x="358" y="79" width="20" height="26.333333333333329"/>
+                                                    <color key="tintColor" name="Grain800"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Iyi-RS-oFr"/>
+                                                        <constraint firstAttribute="width" constant="20" id="qCV-Ha-bpM"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="oYY-d9-Bg9" firstAttribute="top" secondItem="ZKy-bH-8JT" secondAttribute="top" constant="25" id="6c1-wS-KTE"/>
+                                                <constraint firstItem="oYY-d9-Bg9" firstAttribute="top" secondItem="ZKy-bH-8JT" secondAttribute="top" constant="10" id="6c1-wS-KTE"/>
+                                                <constraint firstAttribute="trailing" secondItem="Lro-Wn-GnS" secondAttribute="trailing" constant="15" id="7hY-bz-5Ii"/>
                                                 <constraint firstItem="zqd-gI-Pf4" firstAttribute="top" secondItem="ZKy-bH-8JT" secondAttribute="top" constant="10" id="EhH-Lw-yFG"/>
                                                 <constraint firstAttribute="trailing" secondItem="oYY-d9-Bg9" secondAttribute="trailing" constant="10" id="LaQ-ti-lKl"/>
+                                                <constraint firstItem="Lro-Wn-GnS" firstAttribute="leading" secondItem="5iT-u2-3wL" secondAttribute="trailing" constant="60" id="TbV-aQ-Kn4"/>
+                                                <constraint firstAttribute="bottom" secondItem="Lro-Wn-GnS" secondAttribute="bottom" constant="10" id="W90-OP-Nh3"/>
+                                                <constraint firstAttribute="bottom" secondItem="5iT-u2-3wL" secondAttribute="bottom" constant="10" id="aHZ-cT-xAI"/>
                                                 <constraint firstItem="zqd-gI-Pf4" firstAttribute="leading" secondItem="ZKy-bH-8JT" secondAttribute="leading" constant="10" id="ixc-dQ-za4"/>
                                                 <constraint firstAttribute="bottom" secondItem="zqd-gI-Pf4" secondAttribute="bottom" constant="10" id="reK-T2-cIG"/>
-                                                <constraint firstAttribute="bottom" secondItem="5iT-u2-3wL" secondAttribute="bottom" constant="25" id="rgI-if-WQy"/>
-                                                <constraint firstAttribute="trailing" secondItem="5iT-u2-3wL" secondAttribute="trailing" constant="10" id="w8q-vK-Ifq"/>
                                                 <constraint firstItem="oYY-d9-Bg9" firstAttribute="leading" secondItem="zqd-gI-Pf4" secondAttribute="trailing" constant="10" id="xsZ-IP-czz"/>
                                                 <constraint firstItem="5iT-u2-3wL" firstAttribute="leading" secondItem="zqd-gI-Pf4" secondAttribute="trailing" constant="10" id="z1u-Ir-9Zm"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="Grain200"/>
+                                        <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                         <connections>
                                             <outlet property="imageMovie" destination="zqd-gI-Pf4" id="8Tr-Yv-1GM"/>
                                             <outlet property="releaseDateMovieLabel" destination="5iT-u2-3wL" id="aW1-u4-Sut"/>
@@ -104,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9e-RA-40f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2967" y="-2"/>
+            <point key="canvasLocation" x="2965.6488549618321" y="-2.1126760563380285"/>
         </scene>
         <!--Movie Detail View Controller-->
         <scene sceneID="lmQ-ga-rqL">
@@ -126,7 +135,7 @@
                                             <constraint firstAttribute="height" constant="30" id="4hv-6g-ih1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Rubik-SemiBoldItalic" family="Rubik" pointSize="23"/>
-                                        <color key="textColor" name="GrainLight"/>
+                                        <color key="textColor" name="Grain900"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9d-GV-4HA">
@@ -136,7 +145,7 @@
                                         </constraints>
                                         <string key="text">Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.</string>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
-                                        <color key="textColor" name="GrainDarker"/>
+                                        <color key="textColor" name="Grain800"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1972-03-14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TI-kS-VVy">
@@ -145,7 +154,7 @@
                                             <constraint firstAttribute="height" constant="25" id="RAq-SQ-vRr"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="17"/>
-                                        <color key="textColor" name="GrainLight"/>
+                                        <color key="textColor" name="Grain500"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.695" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kV-Te-05o">
@@ -154,7 +163,7 @@
                                             <constraint firstAttribute="height" constant="25" id="KOy-YU-BEL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
-                                        <color key="textColor" name="GrainLightest"/>
+                                        <color key="textColor" name="Grain900"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -205,14 +214,21 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="GrainDarker">
-            <color red="0.20000000000000001" green="0.38039215686274508" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <namedColor name="Grain200">
+            <color red="0.90196078431372551" green="0.92156862745098034" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="GrainLight">
+        <namedColor name="Grain300">
+            <color red="0.80000000000000004" green="0.84705882352941175" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Grain500">
             <color red="0.59999999999999998" green="0.69019607843137254" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="GrainLightest">
-            <color red="0.80000000000000004" green="0.84705882352941175" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Grain800">
+            <color red="0.20000000000000001" green="0.38039215686274508" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Grain900">
+            <color red="0.0" green="0.22745098039215686" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="WhiteGrained">
             <color red="0.90196078431372551" green="0.92156862745098034" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
