@@ -15,6 +15,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var overviewMovieLabel: UILabel!
     @IBOutlet weak var releaseDateMovieLabel: UILabel!
     @IBOutlet weak var ratingMovieLabel: UILabel!
+    @IBOutlet weak var ratingProgressView: CircularProgressView!
     
     private var movie: Movie
     
@@ -55,7 +56,23 @@ class MovieDetailViewController: UIViewController {
         self.titleMovieLabel.text = self.movie.title
         self.overviewMovieLabel.text = self.movie.overview
         self.releaseDateMovieLabel.text = "Released: \(self.movie.releaseDate)"
-        self.ratingMovieLabel.text = "Rated: \(self.movie.voteAverage.description)"
+        self.setRating()
+    }
+    
+    private func setRating() {
+        var stringDouble = self.movie.voteAverage.description
+        let index = stringDouble.index(stringDouble.startIndex, offsetBy: 1)
+        stringDouble.remove(at: index)
+        let percentSring = String(stringDouble.prefix(2))
+        self.ratingMovieLabel.text = "Rated: \(percentSring)%"
+        if let formattedValue = Double("0.\(stringDouble)") {
+            self.ratingProgressView.animateProgress(
+                to: formattedValue,
+                duration: 5.0
+            )
+        } else {
+            self.ratingProgressView.isHidden = true
+        }
     }
     
     private func fetchPosterAndSetImage() {

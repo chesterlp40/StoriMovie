@@ -138,10 +138,10 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v3N-3s-6tm">
-                                        <rect key="frame" x="10" y="10" width="373" height="442"/>
+                                        <rect key="frame" x="10" y="10" width="373" height="434"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGb-r0-5TN">
-                                        <rect key="frame" x="20" y="422" width="353" height="327"/>
+                                        <rect key="frame" x="20" y="414" width="353" height="335"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Shawshank Redemption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmS-UR-YL4">
                                                 <rect key="frame" x="10" y="15" width="333" height="50"/>
@@ -172,34 +172,43 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rated: 8.704" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kV-Te-05o">
-                                                <rect key="frame" x="10" y="300" width="333" height="22"/>
+                                                <rect key="frame" x="10" y="300" width="116" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" priority="750" constant="22" id="asq-Bk-PjT"/>
+                                                    <constraint firstAttribute="height" priority="750" constant="30" id="asq-Bk-PjT"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="19"/>
                                                 <color key="textColor" name="Grain800"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hp2-tk-ZHG" customClass="CircularProgressView" customModule="StoriMovie" customModuleProvider="target">
+                                                <rect key="frame" x="136" y="300" width="30" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="750" constant="30" id="BoF-fV-vdH"/>
+                                                    <constraint firstAttribute="width" constant="30" id="e4l-yy-q5h"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" name="Grain100"/>
                                         <constraints>
                                             <constraint firstItem="8kV-Te-05o" firstAttribute="leading" secondItem="pGb-r0-5TN" secondAttribute="leading" constant="10" id="0d2-cK-y7k"/>
                                             <constraint firstItem="1TI-kS-VVy" firstAttribute="leading" secondItem="pGb-r0-5TN" secondAttribute="leading" constant="10" id="2qL-DY-1iD"/>
+                                            <constraint firstItem="Hp2-tk-ZHG" firstAttribute="top" secondItem="1TI-kS-VVy" secondAttribute="bottom" constant="10" id="3ah-Xs-hqf"/>
                                             <constraint firstItem="KmS-UR-YL4" firstAttribute="leading" secondItem="pGb-r0-5TN" secondAttribute="leading" constant="10" id="5o7-DY-rEM"/>
+                                            <constraint firstAttribute="bottom" secondItem="Hp2-tk-ZHG" secondAttribute="bottom" constant="10" id="7gy-Db-Vng"/>
                                             <constraint firstAttribute="trailing" secondItem="o9d-GV-4HA" secondAttribute="trailing" constant="10" id="EBB-oQ-zKN"/>
                                             <constraint firstItem="o9d-GV-4HA" firstAttribute="leading" secondItem="pGb-r0-5TN" secondAttribute="leading" constant="10" id="L4a-AH-Dpl"/>
                                             <constraint firstAttribute="trailing" secondItem="KmS-UR-YL4" secondAttribute="trailing" constant="10" id="Wgc-m2-ZTo"/>
+                                            <constraint firstItem="Hp2-tk-ZHG" firstAttribute="leading" secondItem="8kV-Te-05o" secondAttribute="trailing" constant="10" id="gsV-IQ-TN8"/>
                                             <constraint firstAttribute="trailing" secondItem="1TI-kS-VVy" secondAttribute="trailing" constant="10" id="hGV-KS-qkA"/>
                                             <constraint firstItem="KmS-UR-YL4" firstAttribute="top" secondItem="pGb-r0-5TN" secondAttribute="top" constant="15" id="lXe-dN-S0m"/>
                                             <constraint firstItem="8kV-Te-05o" firstAttribute="top" secondItem="1TI-kS-VVy" secondAttribute="bottom" constant="10" id="pfT-j9-2ae"/>
                                             <constraint firstItem="1TI-kS-VVy" firstAttribute="top" secondItem="o9d-GV-4HA" secondAttribute="bottom" constant="5" id="rf1-cf-QAK"/>
                                             <constraint firstAttribute="bottom" secondItem="8kV-Te-05o" secondAttribute="bottom" constant="5" id="v5H-fv-Jhy"/>
                                             <constraint firstItem="o9d-GV-4HA" firstAttribute="top" secondItem="KmS-UR-YL4" secondAttribute="bottom" constant="10" id="v8g-ZG-rl6"/>
-                                            <constraint firstAttribute="trailing" secondItem="8kV-Te-05o" secondAttribute="trailing" constant="10" id="y8Z-21-i5X"/>
                                         </constraints>
                                     </view>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="3fF-31-iTC">
-                                        <rect key="frame" x="166.66666666666666" y="201" width="60" height="60"/>
+                                        <rect key="frame" x="166.66666666666666" y="197" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="9zq-1o-L3V"/>
                                             <constraint firstAttribute="height" constant="60" id="qjA-lb-IDD"/>
@@ -235,6 +244,7 @@
                         <outlet property="overviewMovieLabel" destination="o9d-GV-4HA" id="2Ap-E2-Ofb"/>
                         <outlet property="posterMovie" destination="v3N-3s-6tm" id="9gZ-TZ-hE0"/>
                         <outlet property="ratingMovieLabel" destination="8kV-Te-05o" id="9HD-5P-oZm"/>
+                        <outlet property="ratingProgressView" destination="Hp2-tk-ZHG" id="6HB-8t-Rnr"/>
                         <outlet property="releaseDateMovieLabel" destination="1TI-kS-VVy" id="XnL-eU-6Z1"/>
                         <outlet property="titleMovieLabel" destination="KmS-UR-YL4" id="VVZ-fa-tbR"/>
                     </connections>

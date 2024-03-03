@@ -23,6 +23,7 @@
 		8692A6672B92ED9B009105D8 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8692A6592B92ED9A009105D8 /* Rubik-BoldItalic.ttf */; };
 		8692A6682B92ED9B009105D8 /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8692A65A2B92ED9A009105D8 /* Rubik-SemiBoldItalic.ttf */; };
 		8692A66B2B93660F009105D8 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8692A66A2B93660F009105D8 /* Helper.swift */; };
+		8692A66E2B943CD8009105D8 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8692A66D2B943CD8009105D8 /* CircularProgressView.swift */; };
 		86EB7E272B92856700EBF28C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E262B92856700EBF28C /* AppDelegate.swift */; };
 		86EB7E292B92856700EBF28C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E282B92856700EBF28C /* SceneDelegate.swift */; };
 		86EB7E2B2B92856700EBF28C /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E2A2B92856700EBF28C /* MovieListViewController.swift */; };
@@ -74,6 +75,7 @@
 		8692A6592B92ED9A009105D8 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 		8692A65A2B92ED9A009105D8 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8692A66A2B93660F009105D8 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		8692A66D2B943CD8009105D8 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		86EB7E232B92856700EBF28C /* StoriMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoriMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EB7E262B92856700EBF28C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86EB7E282B92856700EBF28C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,14 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		8692A66C2B943CB9009105D8 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				8692A66D2B943CD8009105D8 /* CircularProgressView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		86EB7E1A2B92856700EBF28C = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +190,7 @@
 		86EB7E252B92856700EBF28C /* StoriMovie */ = {
 			isa = PBXGroup;
 			children = (
+				8692A66C2B943CB9009105D8 /* Component */,
 				8692A6692B9365F0009105D8 /* Util */,
 				86EB7E702B92A0D600EBF28C /* Cell */,
 				86EB7E6A2B9295A300EBF28C /* ViewModel */,
@@ -436,6 +447,7 @@
 				86EB7E272B92856700EBF28C /* AppDelegate.swift in Sources */,
 				86EB7E612B928EF500EBF28C /* Movie.swift in Sources */,
 				86EB7E632B928EF500EBF28C /* MovieResponse.swift in Sources */,
+				8692A66E2B943CD8009105D8 /* CircularProgressView.swift in Sources */,
 				86EB7E292B92856700EBF28C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
