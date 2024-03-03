@@ -68,7 +68,7 @@ class MovieDetailViewController: UIViewController {
         if let formattedValue = Double("0.\(stringDouble)") {
             self.ratingProgressView.animateProgress(
                 to: formattedValue,
-                duration: 5.0
+                duration: 2.0
             )
         } else {
             self.ratingProgressView.isHidden = true
