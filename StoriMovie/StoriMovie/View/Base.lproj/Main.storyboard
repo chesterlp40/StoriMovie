@@ -148,7 +148,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Shawshank Redemption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmS-UR-YL4">
                                                 <rect key="frame" x="10" y="5" width="333" height="50"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="mCc-hl-Ajv"/>
+                                                    <constraint firstAttribute="height" priority="750" constant="50" id="mCc-hl-Ajv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
                                                 <color key="textColor" name="Grain500"/>
@@ -157,7 +157,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9d-GV-4HA">
                                                 <rect key="frame" x="10" y="60" width="333" height="190"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="190" id="Xdb-WQ-xda"/>
+                                                    <constraint firstAttribute="height" priority="750" constant="190" id="Xdb-WQ-xda"/>
                                                 </constraints>
                                                 <string key="text">Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.</string>
                                                 <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="14"/>
@@ -167,7 +167,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Released: 1994-09-23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TI-kS-VVy">
                                                 <rect key="frame" x="10" y="262" width="333" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="ERq-V5-99X"/>
+                                                    <constraint firstAttribute="height" priority="750" constant="20" id="ERq-V5-99X"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Rubik-MediumItalic" family="Rubik" pointSize="16"/>
                                                 <color key="textColor" name="Grain400"/>
@@ -176,7 +176,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rated: 8.704" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kV-Te-05o">
                                                 <rect key="frame" x="10" y="292" width="333" height="22"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="22" id="asq-Bk-PjT"/>
+                                                    <constraint firstAttribute="height" priority="750" constant="22" id="asq-Bk-PjT"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
                                                 <color key="textColor" name="Grain800"/>
