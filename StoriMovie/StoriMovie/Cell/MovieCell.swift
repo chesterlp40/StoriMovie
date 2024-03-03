@@ -29,6 +29,7 @@ class MovieCell: UITableViewCell {
                 self.activityIndicatorView.stopAnimating()
             } catch {
                 self.imageMovie.image = UIImage(named: "wifi.exclamation")
+                self.imageMovie.contentMode = .scaleAspectFit
                 self.activityIndicatorView.stopAnimating()
             }
         }

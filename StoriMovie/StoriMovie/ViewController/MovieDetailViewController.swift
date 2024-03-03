@@ -85,6 +85,7 @@ class MovieDetailViewController: UIViewController {
                 self.activityIndicatorView.stopAnimating()
             } catch {
                 self.posterMovie.image = UIImage(named: "wifi.exclamation")
+                self.posterMovie.contentMode = .scaleAspectFit
                 self.activityIndicatorView.stopAnimating()
             }
         }

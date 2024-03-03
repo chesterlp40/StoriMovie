@@ -7,17 +7,97 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7743F710-D025-4BCA-B87C-902CCE96974B"
+            uuid = "817A4683-A7C7-4034-816A-2BD8D7300156"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "StoriMovie/Component/CircularProgressView.swift"
+            filePath = "StoriMovie/ViewController/MovieListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "animateProgress(to:duration:)"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "fetchData()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "817A4683-A7C7-4034-816A-2BD8D7300156 - c0bec1ba795e9231"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for StoriMovie.MovieListViewController.fetchData() async throws -&gt; ()"
+                  moduleName = "StoriMovie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chester/Desktop/Repos/StoriMovie/StoriMovie/StoriMovie/ViewController/MovieListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "512">
+               </Location>
+               <Location
+                  uuid = "817A4683-A7C7-4034-816A-2BD8D7300156 - c0bec1ba795e9231"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for StoriMovie.MovieListViewController.fetchData() async throws -&gt; ()"
+                  moduleName = "StoriMovie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chester/Desktop/Repos/StoriMovie/StoriMovie/StoriMovie/ViewController/MovieListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "504">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BCA00C9E-9627-4662-B0C2-DB817201596D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StoriMovie/ViewController/MovieListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BCA00C9E-9627-4662-B0C2-DB817201596D - c0bec1ba795e9210"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for StoriMovie.MovieListViewController.fetchData() async throws -&gt; ()"
+                  moduleName = "StoriMovie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chester/Desktop/Repos/StoriMovie/StoriMovie/StoriMovie/ViewController/MovieListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "620">
+               </Location>
+               <Location
+                  uuid = "BCA00C9E-9627-4662-B0C2-DB817201596D - c0bec1ba795e9210"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for StoriMovie.MovieListViewController.fetchData() async throws -&gt; ()"
+                  moduleName = "StoriMovie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chester/Desktop/Repos/StoriMovie/StoriMovie/StoriMovie/ViewController/MovieListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "612">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

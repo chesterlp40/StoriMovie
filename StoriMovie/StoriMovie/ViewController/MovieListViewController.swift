@@ -39,6 +39,29 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }
+        if self.viewModel.movieCount == 0 {
+            self.tableView.backgroundView = self.setupErrorView()
+        }
+    }
+    
+    func setupErrorView() -> UIView {
+        let errorView = UIView(
+            frame: self.tableView.bounds
+        )
+
+        let errorImageView = UIImageView(
+            image: UIImage(named: "wifi.exclamation")
+        )
+        errorImageView.contentMode = .scaleAspectFit
+        errorImageView.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: 120,
+            height: 120
+        )
+        errorImageView.center = errorView.center
+        errorView.addSubview(errorImageView)
+        return errorView
     }
     
     func tableView(

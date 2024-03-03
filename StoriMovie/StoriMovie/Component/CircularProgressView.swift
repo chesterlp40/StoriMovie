@@ -80,11 +80,11 @@ class CircularProgressView: UIView {
         for progress: Double
     ) {
         if progress >= 0.75 {
-            self.progressLayer.strokeColor = UIColor.green.cgColor
+            self.progressLayer.strokeColor = UIColor.rateGreen.cgColor
         } else if progress >= 0.5 {
-            self.progressLayer.strokeColor = UIColor.yellow.cgColor
+            self.progressLayer.strokeColor = UIColor.rateYellow.cgColor
         } else {
-            self.progressLayer.strokeColor = UIColor.red.cgColor
+            self.progressLayer.strokeColor = UIColor.rateRed.cgColor
         }
     }
 }
