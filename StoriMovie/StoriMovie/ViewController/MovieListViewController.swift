@@ -18,8 +18,15 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     private func setupAllComponents() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(
+            self,
+            action: #selector(handleRefresh(_:)),
+            for: .valueChanged
+        )
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.tableView.refreshControl = refreshControl
         self.navigationItem.title = "Top Rated Movies"
         self.view.backgroundColor = UIColor.grain200
         Helper.setNavigationConfig(
@@ -29,9 +36,24 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
             do {
                 try await self.fetchData()
             } catch {
-                print("Error fetching data: \(error.localizedDescription)")
+                self.tableView.backgroundView = self.setupErrorView()
             }
         }
+    }
+    
+    @objc 
+    func handleRefresh(
+        _ refreshControl: UIRefreshControl
+    ) {
+        refreshControl.beginRefreshing()
+        Task {
+            do {
+                try await self.fetchData()
+            } catch {
+                self.tableView.backgroundView = self.setupErrorView()
+            }
+        }
+        refreshControl.endRefreshing()
     }
     
     func fetchData() async throws {
@@ -112,7 +134,10 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
             movieDetailViewController,
             animated: true
         )
-        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(
+            at: indexPath,
+            animated: true
+        )
     }
     
     func tableView(
@@ -125,10 +150,9 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
                 do {
                     try await self.fetchData()
                 } catch {
-                    print("Error fetching more data: \(error.localizedDescription)")
+                    self.tableView.backgroundView = self.setupErrorView()
                 }
             }
         }
     }
 }
-
