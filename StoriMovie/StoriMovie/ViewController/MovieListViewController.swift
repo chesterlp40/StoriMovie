@@ -67,7 +67,7 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         _ tableView: UITableView,
         heightForRowAt indexPath: IndexPath
     ) -> CGFloat {
-        return 140
+        return 130
     }
     
     func tableView(
@@ -89,6 +89,7 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
             movieDetailViewController,
             animated: true
         )
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(
