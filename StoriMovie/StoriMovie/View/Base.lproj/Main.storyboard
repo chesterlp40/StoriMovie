@@ -137,16 +137,13 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v3N-3s-6tm">
-                                        <rect key="frame" x="10" y="10" width="373" height="450"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="450" id="aU4-Jj-YOl"/>
-                                        </constraints>
+                                        <rect key="frame" x="10" y="10" width="373" height="442"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGb-r0-5TN">
-                                        <rect key="frame" x="20" y="430" width="353" height="319"/>
+                                        <rect key="frame" x="20" y="422" width="353" height="327"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Shawshank Redemption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmS-UR-YL4">
-                                                <rect key="frame" x="10" y="5" width="333" height="50"/>
+                                                <rect key="frame" x="10" y="15" width="333" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="750" constant="50" id="mCc-hl-Ajv"/>
                                                 </constraints>
@@ -155,7 +152,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9d-GV-4HA">
-                                                <rect key="frame" x="10" y="60" width="333" height="190"/>
+                                                <rect key="frame" x="10" y="75" width="333" height="190"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="750" constant="190" id="Xdb-WQ-xda"/>
                                                 </constraints>
@@ -165,7 +162,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Released: 1994-09-23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TI-kS-VVy">
-                                                <rect key="frame" x="10" y="262" width="333" height="20"/>
+                                                <rect key="frame" x="10" y="270" width="333" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="750" constant="20" id="ERq-V5-99X"/>
                                                 </constraints>
@@ -174,7 +171,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rated: 8.704" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kV-Te-05o">
-                                                <rect key="frame" x="10" y="292" width="333" height="22"/>
+                                                <rect key="frame" x="10" y="300" width="333" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="750" constant="22" id="asq-Bk-PjT"/>
                                                 </constraints>
@@ -190,18 +187,18 @@
                                             <constraint firstItem="KmS-UR-YL4" firstAttribute="leading" secondItem="pGb-r0-5TN" secondAttribute="leading" constant="10" id="5o7-DY-rEM"/>
                                             <constraint firstAttribute="trailing" secondItem="o9d-GV-4HA" secondAttribute="trailing" constant="10" id="EBB-oQ-zKN"/>
                                             <constraint firstItem="o9d-GV-4HA" firstAttribute="leading" secondItem="pGb-r0-5TN" secondAttribute="leading" constant="10" id="L4a-AH-Dpl"/>
-                                            <constraint firstItem="1TI-kS-VVy" firstAttribute="top" secondItem="o9d-GV-4HA" secondAttribute="bottom" constant="12" id="MJx-JC-Nf8"/>
                                             <constraint firstAttribute="trailing" secondItem="KmS-UR-YL4" secondAttribute="trailing" constant="10" id="Wgc-m2-ZTo"/>
                                             <constraint firstAttribute="trailing" secondItem="1TI-kS-VVy" secondAttribute="trailing" constant="10" id="hGV-KS-qkA"/>
-                                            <constraint firstItem="KmS-UR-YL4" firstAttribute="top" secondItem="pGb-r0-5TN" secondAttribute="top" constant="5" id="lXe-dN-S0m"/>
+                                            <constraint firstItem="KmS-UR-YL4" firstAttribute="top" secondItem="pGb-r0-5TN" secondAttribute="top" constant="15" id="lXe-dN-S0m"/>
                                             <constraint firstItem="8kV-Te-05o" firstAttribute="top" secondItem="1TI-kS-VVy" secondAttribute="bottom" constant="10" id="pfT-j9-2ae"/>
+                                            <constraint firstItem="1TI-kS-VVy" firstAttribute="top" secondItem="o9d-GV-4HA" secondAttribute="bottom" constant="5" id="rf1-cf-QAK"/>
                                             <constraint firstAttribute="bottom" secondItem="8kV-Te-05o" secondAttribute="bottom" constant="5" id="v5H-fv-Jhy"/>
-                                            <constraint firstItem="o9d-GV-4HA" firstAttribute="top" secondItem="KmS-UR-YL4" secondAttribute="bottom" constant="5" id="v8g-ZG-rl6"/>
+                                            <constraint firstItem="o9d-GV-4HA" firstAttribute="top" secondItem="KmS-UR-YL4" secondAttribute="bottom" constant="10" id="v8g-ZG-rl6"/>
                                             <constraint firstAttribute="trailing" secondItem="8kV-Te-05o" secondAttribute="trailing" constant="10" id="y8Z-21-i5X"/>
                                         </constraints>
                                     </view>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="3fF-31-iTC">
-                                        <rect key="frame" x="166.66666666666666" y="205" width="60" height="60"/>
+                                        <rect key="frame" x="166.66666666666666" y="201" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="9zq-1o-L3V"/>
                                             <constraint firstAttribute="height" constant="60" id="qjA-lb-IDD"/>
