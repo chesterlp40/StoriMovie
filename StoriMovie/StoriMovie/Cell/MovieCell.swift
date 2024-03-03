@@ -10,6 +10,7 @@ import UIKit
 class MovieCell: UITableViewCell {
     static let reuseIdentifier = "MovieCell"
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageMovie: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var titleMovieLabel: UILabel!
@@ -34,8 +35,17 @@ class MovieCell: UITableViewCell {
         self.titleMovieLabel.text = movie.title
         self.releaseDateMovieLabel.text = "Released:\n\(movie.releaseDate)"
         self.imageMovie.layer.cornerRadius = 5
-        self.layer.cornerRadius = 10
-        self.layer.borderColor = UIColor.grain400.cgColor
-        self.layer.borderWidth = 2
+        self.layer.backgroundColor = UIColor.grain300.cgColor
+        self.containerView.layer.backgroundColor = UIColor.grain100.cgColor
+        self.containerView.layer.cornerRadius = 10
+        self.containerView.layer.borderColor = UIColor.grain400.cgColor
+        self.containerView.layer.borderWidth = 2
+        self.containerView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            self.containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 2),
+            self.containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -2),
+            self.containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 4),
+            self.containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -4)
+        ])
     }
 }

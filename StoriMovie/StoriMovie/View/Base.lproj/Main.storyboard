@@ -38,7 +38,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="109" id="Wt2-75-r8u" customClass="MovieCell" customModule="StoriMovie" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wt2-75-r8u" id="ZKy-bH-8JT">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wt2-75-r8u" id="ZKy-bH-8JT" userLabel="Container View">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -49,7 +49,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iT-u2-3wL">
-                                                    <rect key="frame" x="180" y="54" width="118" height="45"/>
+                                                    <rect key="frame" x="180" y="59" width="118" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="DSo-Rb-QXg"/>
                                                     </constraints>
@@ -57,7 +57,7 @@
                                                     <color key="textColor" name="Grain500"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Shawshank Redemption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYY-d9-Bg9">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Shawshank Redemption" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYY-d9-Bg9">
                                                     <rect key="frame" x="180" y="9.9999999999999964" width="203" height="47.666666666666657"/>
                                                     <fontDescription key="fontDescription" name="Rubik-SemiBoldItalic" family="Rubik" pointSize="20"/>
                                                     <color key="textColor" name="Grain900"/>
@@ -88,7 +88,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="oYY-d9-Bg9" secondAttribute="trailing" constant="10" id="LaQ-ti-lKl"/>
                                                 <constraint firstItem="Lro-Wn-GnS" firstAttribute="leading" secondItem="5iT-u2-3wL" secondAttribute="trailing" constant="60" id="TbV-aQ-Kn4"/>
                                                 <constraint firstAttribute="bottom" secondItem="Lro-Wn-GnS" secondAttribute="bottom" constant="10" id="W90-OP-Nh3"/>
-                                                <constraint firstAttribute="bottom" secondItem="5iT-u2-3wL" secondAttribute="bottom" constant="10" id="aHZ-cT-xAI"/>
+                                                <constraint firstAttribute="bottom" secondItem="5iT-u2-3wL" secondAttribute="bottom" constant="5" id="aHZ-cT-xAI"/>
                                                 <constraint firstItem="zqd-gI-Pf4" firstAttribute="leading" secondItem="ZKy-bH-8JT" secondAttribute="leading" constant="10" id="ixc-dQ-za4"/>
                                                 <constraint firstAttribute="bottom" secondItem="zqd-gI-Pf4" secondAttribute="bottom" constant="10" id="reK-T2-cIG"/>
                                                 <constraint firstItem="oYY-d9-Bg9" firstAttribute="leading" secondItem="zqd-gI-Pf4" secondAttribute="trailing" constant="10" id="xsZ-IP-czz"/>
@@ -99,6 +99,7 @@
                                         <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                         <connections>
                                             <outlet property="activityIndicatorView" destination="uJ2-Vd-XM9" id="Jyq-Vn-VGe"/>
+                                            <outlet property="containerView" destination="ZKy-bH-8JT" id="fOP-y2-SS2"/>
                                             <outlet property="imageMovie" destination="zqd-gI-Pf4" id="8Tr-Yv-1GM"/>
                                             <outlet property="releaseDateMovieLabel" destination="5iT-u2-3wL" id="aW1-u4-Sut"/>
                                             <outlet property="titleMovieLabel" destination="oYY-d9-Bg9" id="3HY-BU-1dt"/>
