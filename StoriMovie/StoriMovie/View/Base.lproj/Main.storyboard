@@ -35,21 +35,21 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" name="Grain300"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="90" id="Wt2-75-r8u" customClass="MovieCell" customModule="StoriMovie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="109" id="Wt2-75-r8u" customClass="MovieCell" customModule="StoriMovie" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wt2-75-r8u" id="ZKy-bH-8JT">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zqd-gI-Pf4">
-                                                    <rect key="frame" x="10" y="10" width="160" height="70"/>
+                                                    <rect key="frame" x="10" y="10" width="160" height="89"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="160" id="d3e-Nw-P7C"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iT-u2-3wL">
-                                                    <rect key="frame" x="180" y="35" width="118" height="45"/>
+                                                    <rect key="frame" x="180" y="54" width="118" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="DSo-Rb-QXg"/>
                                                     </constraints>
@@ -57,14 +57,14 @@
                                                     <color key="textColor" name="Grain500"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Godfather" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYY-d9-Bg9">
-                                                    <rect key="frame" x="180" y="10" width="203" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Shawshank Redemption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYY-d9-Bg9">
+                                                    <rect key="frame" x="180" y="9.9999999999999964" width="203" height="47.666666666666657"/>
                                                     <fontDescription key="fontDescription" name="Rubik-SemiBoldItalic" family="Rubik" pointSize="20"/>
                                                     <color key="textColor" name="Grain900"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lro-Wn-GnS">
-                                                    <rect key="frame" x="358" y="52.000000000000007" width="20" height="26.333333333333336"/>
+                                                    <rect key="frame" x="358" y="71" width="20" height="26.333333333333329"/>
                                                     <color key="tintColor" name="Grain800"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Iyi-RS-oFr"/>
@@ -72,7 +72,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="uJ2-Vd-XM9">
-                                                    <rect key="frame" x="75" y="30" width="30" height="30"/>
+                                                    <rect key="frame" x="75" y="39.666666666666664" width="30" height="29.999999999999993"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="2W1-tB-tiA"/>
                                                         <constraint firstAttribute="width" constant="30" id="qPx-cd-7E2"/>
@@ -136,37 +136,49 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVE-B6-1WA" userLabel="ContentView">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi.exclamation" translatesAutoresizingMaskIntoConstraints="NO" id="v3N-3s-6tm">
-                                        <rect key="frame" x="10" y="10" width="373" height="460"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v3N-3s-6tm">
+                                        <rect key="frame" x="10" y="10" width="373" height="450"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="460" id="aU4-Jj-YOl"/>
+                                            <constraint firstAttribute="height" constant="450" id="aU4-Jj-YOl"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGb-r0-5TN">
-                                        <rect key="frame" x="20" y="440" width="353" height="309"/>
+                                        <rect key="frame" x="20" y="430" width="353" height="319"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Godfather" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmS-UR-YL4">
-                                                <rect key="frame" x="10" y="5.0000000000000018" width="333" height="28.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Shawshank Redemption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmS-UR-YL4">
+                                                <rect key="frame" x="10" y="5" width="333" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="mCc-hl-Ajv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
                                                 <color key="textColor" name="Grain500"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9d-GV-4HA">
-                                                <rect key="frame" x="10" y="38.666666666666636" width="333" height="124.66666666666669"/>
-                                                <string key="text">Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.</string>
-                                                <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="15"/>
+                                                <rect key="frame" x="10" y="60" width="333" height="190"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="190" id="Xdb-WQ-xda"/>
+                                                </constraints>
+                                                <string key="text">Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.</string>
+                                                <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="14"/>
                                                 <color key="textColor" name="Grain800"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Released: 1972-03-14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TI-kS-VVy">
-                                                <rect key="frame" x="10" y="168.33333333333337" width="333" height="106.66666666666669"/>
-                                                <fontDescription key="fontDescription" name="Rubik-MediumItalic" family="Rubik" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Released: 1994-09-23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TI-kS-VVy">
+                                                <rect key="frame" x="10" y="262" width="333" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="ERq-V5-99X"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-MediumItalic" family="Rubik" pointSize="16"/>
                                                 <color key="textColor" name="Grain400"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rated: 8.695" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kV-Te-05o">
-                                                <rect key="frame" x="10" y="280" width="333" height="24"/>
-                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rated: 8.704" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kV-Te-05o">
+                                                <rect key="frame" x="10" y="292" width="333" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="asq-Bk-PjT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
                                                 <color key="textColor" name="Grain800"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -178,18 +190,18 @@
                                             <constraint firstItem="KmS-UR-YL4" firstAttribute="leading" secondItem="pGb-r0-5TN" secondAttribute="leading" constant="10" id="5o7-DY-rEM"/>
                                             <constraint firstAttribute="trailing" secondItem="o9d-GV-4HA" secondAttribute="trailing" constant="10" id="EBB-oQ-zKN"/>
                                             <constraint firstItem="o9d-GV-4HA" firstAttribute="leading" secondItem="pGb-r0-5TN" secondAttribute="leading" constant="10" id="L4a-AH-Dpl"/>
+                                            <constraint firstItem="1TI-kS-VVy" firstAttribute="top" secondItem="o9d-GV-4HA" secondAttribute="bottom" constant="12" id="MJx-JC-Nf8"/>
                                             <constraint firstAttribute="trailing" secondItem="KmS-UR-YL4" secondAttribute="trailing" constant="10" id="Wgc-m2-ZTo"/>
                                             <constraint firstAttribute="trailing" secondItem="1TI-kS-VVy" secondAttribute="trailing" constant="10" id="hGV-KS-qkA"/>
                                             <constraint firstItem="KmS-UR-YL4" firstAttribute="top" secondItem="pGb-r0-5TN" secondAttribute="top" constant="5" id="lXe-dN-S0m"/>
-                                            <constraint firstItem="1TI-kS-VVy" firstAttribute="top" secondItem="o9d-GV-4HA" secondAttribute="bottom" constant="5" id="mMl-oa-Asa"/>
-                                            <constraint firstItem="8kV-Te-05o" firstAttribute="top" secondItem="1TI-kS-VVy" secondAttribute="bottom" constant="5" id="pfT-j9-2ae"/>
+                                            <constraint firstItem="8kV-Te-05o" firstAttribute="top" secondItem="1TI-kS-VVy" secondAttribute="bottom" constant="10" id="pfT-j9-2ae"/>
                                             <constraint firstAttribute="bottom" secondItem="8kV-Te-05o" secondAttribute="bottom" constant="5" id="v5H-fv-Jhy"/>
                                             <constraint firstItem="o9d-GV-4HA" firstAttribute="top" secondItem="KmS-UR-YL4" secondAttribute="bottom" constant="5" id="v8g-ZG-rl6"/>
                                             <constraint firstAttribute="trailing" secondItem="8kV-Te-05o" secondAttribute="trailing" constant="10" id="y8Z-21-i5X"/>
                                         </constraints>
                                     </view>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="3fF-31-iTC">
-                                        <rect key="frame" x="166.66666666666666" y="210" width="60" height="60"/>
+                                        <rect key="frame" x="166.66666666666666" y="205" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="9zq-1o-L3V"/>
                                             <constraint firstAttribute="height" constant="60" id="qjA-lb-IDD"/>
@@ -254,7 +266,6 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
-        <image name="wifi.exclamation" width="22.48699951171875" height="18.427700042724609"/>
         <namedColor name="Grain100">
             <color red="0.95294117647058818" green="0.96078431372549022" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
