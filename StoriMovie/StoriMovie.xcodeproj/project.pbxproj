@@ -23,9 +23,6 @@
 		86EB7E2E2B92856700EBF28C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EB7E2C2B92856700EBF28C /* Main.storyboard */; };
 		86EB7E302B92856800EBF28C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86EB7E2F2B92856800EBF28C /* Assets.xcassets */; };
 		86EB7E332B92856800EBF28C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EB7E312B92856800EBF28C /* LaunchScreen.storyboard */; };
-		86EB7E3E2B92856800EBF28C /* StoriMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E3D2B92856800EBF28C /* StoriMovieTests.swift */; };
-		86EB7E482B92856800EBF28C /* StoriMovieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E472B92856800EBF28C /* StoriMovieUITests.swift */; };
-		86EB7E4A2B92856800EBF28C /* StoriMovieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E492B92856800EBF28C /* StoriMovieUITestsLaunchTests.swift */; };
 		86EB7E612B928EF500EBF28C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E5D2B928EF500EBF28C /* Movie.swift */; };
 		86EB7E632B928EF500EBF28C /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E5F2B928EF500EBF28C /* MovieResponse.swift */; };
 		86EB7E682B928F4100EBF28C /* RestClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E662B928F4100EBF28C /* RestClientService.swift */; };
@@ -71,10 +68,7 @@
 		86EB7E322B92856800EBF28C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86EB7E342B92856800EBF28C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86EB7E392B92856800EBF28C /* StoriMovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoriMovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		86EB7E3D2B92856800EBF28C /* StoriMovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriMovieTests.swift; sourceTree = "<group>"; };
 		86EB7E432B92856800EBF28C /* StoriMovieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoriMovieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		86EB7E472B92856800EBF28C /* StoriMovieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriMovieUITests.swift; sourceTree = "<group>"; };
-		86EB7E492B92856800EBF28C /* StoriMovieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriMovieUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		86EB7E5D2B928EF500EBF28C /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		86EB7E5F2B928EF500EBF28C /* MovieResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		86EB7E662B928F4100EBF28C /* RestClientService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClientService.swift; sourceTree = "<group>"; };
@@ -148,8 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				86EB7E252B92856700EBF28C /* StoriMovie */,
-				86EB7E3C2B92856800EBF28C /* StoriMovieTests */,
-				86EB7E462B92856800EBF28C /* StoriMovieUITests */,
 				86EB7E242B92856700EBF28C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -179,23 +171,6 @@
 				86EB7E562B9285BD00EBF28C /* Resource */,
 			);
 			path = StoriMovie;
-			sourceTree = "<group>";
-		};
-		86EB7E3C2B92856800EBF28C /* StoriMovieTests */ = {
-			isa = PBXGroup;
-			children = (
-				86EB7E3D2B92856800EBF28C /* StoriMovieTests.swift */,
-			);
-			path = StoriMovieTests;
-			sourceTree = "<group>";
-		};
-		86EB7E462B92856800EBF28C /* StoriMovieUITests */ = {
-			isa = PBXGroup;
-			children = (
-				86EB7E472B92856800EBF28C /* StoriMovieUITests.swift */,
-				86EB7E492B92856800EBF28C /* StoriMovieUITestsLaunchTests.swift */,
-			);
-			path = StoriMovieUITests;
 			sourceTree = "<group>";
 		};
 		86EB7E562B9285BD00EBF28C /* Resource */ = {
@@ -428,7 +403,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86EB7E3E2B92856800EBF28C /* StoriMovieTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,8 +410,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86EB7E482B92856800EBF28C /* StoriMovieUITests.swift in Sources */,
-				86EB7E4A2B92856800EBF28C /* StoriMovieUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
