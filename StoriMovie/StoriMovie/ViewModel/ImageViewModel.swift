@@ -8,7 +8,7 @@
 import UIKit
 
 /// View Model asociated to **UIImage** model.
-class ImageViewModel {
+final class ImageViewModel {
     
     /// Request data.
     ///

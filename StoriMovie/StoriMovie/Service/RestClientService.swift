@@ -8,7 +8,7 @@
 import UIKit
 
 /// Rest Client Service for comunicate with API.
-class RestClientService {
+final class RestClientService {
     static let shared = RestClientService()
     
     /// Request for **Movie**.
@@ -66,7 +66,7 @@ class RestClientService {
     /// Parse information received from API.
     ///
     /// - Parameter data: **Data**.
-    /// - Returns: **T**.
+    /// - Returns: **GenericData**.
     private func parse<T: Decodable>(
         _ data: Data
     ) throws -> T {

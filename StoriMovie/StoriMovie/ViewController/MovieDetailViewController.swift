@@ -8,7 +8,7 @@
 import UIKit
 
 /// View controller to detailed expose of the movies.
-class MovieDetailViewController: UIViewController {
+final class MovieDetailViewController: UIViewController {
     @IBOutlet weak var posterMovie: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var contentView: UIView!

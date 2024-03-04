@@ -9,7 +9,7 @@ import SafariServices
 import UIKit
 
 /// Custom Modal to present an information UIView.
-class OctocadModalViewController: UIViewController {
+final class OctocadModalViewController: UIViewController {
     
     /// View configuration.
     override func viewDidLoad() {

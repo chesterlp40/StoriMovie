@@ -8,7 +8,7 @@
 import UIKit
 
 /// View controller for show all the top rated movies with image and information.
-class MovieListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+final class MovieListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     private var viewModel = MovieViewModel()
     
     @IBOutlet weak var tableView: UITableView!

@@ -8,7 +8,7 @@
 import UIKit
 
 /// View Model asociated to **Movie** model.
-class MovieViewModel {
+final class MovieViewModel {
     private var movies: [Movie] = []
     private var currentPage = 1
     
