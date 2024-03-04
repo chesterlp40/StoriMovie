@@ -21,7 +21,9 @@ class RestClientService {
             throw RestClientServiceError.invalidRequest
         }
         do {
-            let (data, _) = try await URLSession.shared.data(for: request)
+            let (data, _) = try await URLSession.shared.data(
+                for: request
+            )
             let result: MovieResponse = try self.parse(data)
             return result.results
         } catch {
@@ -40,7 +42,9 @@ class RestClientService {
             throw RestClientServiceError.invalidRequest
         }
         do {
-            let (data, _) = try await URLSession.shared.data(for: request)
+            let (data, _) = try await URLSession.shared.data(
+                for: request
+            )
             if let image = UIImage(data: data) {
                 return image
             }

@@ -25,7 +25,10 @@ class OctocadModalViewController: UIViewController {
             effect: blurEffect
         )
         blurEffectView.frame = self.view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView.autoresizingMask = [
+            .flexibleWidth,
+            .flexibleHeight
+        ]
         self.view.addSubview(
             blurEffectView
         )
@@ -38,8 +41,8 @@ class OctocadModalViewController: UIViewController {
                 height: 400
             )
         )
-        centralView.center = view.center
-        centralView.backgroundColor = .white
+        centralView.center = self.view.center
+        centralView.backgroundColor = UIColor.grain0
         centralView.layer.cornerRadius = 12
         self.view.addSubview(
             centralView
@@ -54,7 +57,7 @@ class OctocadModalViewController: UIViewController {
             )
         )
         imageView.image = UIImage(
-            named: "octocad"
+            named: Helper.OctocadModalViewController.octocadKey // "octocad"
         )
         imageView.contentMode = .scaleToFill
         
@@ -66,8 +69,11 @@ class OctocadModalViewController: UIViewController {
                 height: 50
             )
         )
-        titleLabel.text = "Enjoying the test?\n Visit my GitHub"
-        titleLabel.font = UIFont(name: "Rubik-SemiBold", size: 17)
+        titleLabel.text = Helper.OctocadModalViewController.titleLabelText // "Enjoying the test?\n Visit my GitHub"
+        titleLabel.font = UIFont(
+            name: Helper.OctocadModalViewController.titleFont,
+            size: 17
+        )
         titleLabel.textColor = UIColor.grain900
         titleLabel.numberOfLines = 2
         titleLabel.textAlignment = .center
@@ -80,8 +86,11 @@ class OctocadModalViewController: UIViewController {
                 height: 90
             )
         )
-        subtitleLabel.text = "In my personal GitHub you can find a lot of test app to show you my developer skills."
-        subtitleLabel.font = UIFont(name: "Rubik-Regular", size: 13)
+        subtitleLabel.text = Helper.OctocadModalViewController.subTitleLabelText // "In my personal GitHub you can find a lot of test app to show you my developer skills."
+        subtitleLabel.font = UIFont(
+            name: Helper.OctocadModalViewController.subTitleFont,
+            size: 13
+        )
         subtitleLabel.textColor = UIColor.grain700
         subtitleLabel.numberOfLines = 0
         subtitleLabel.textAlignment = .center
@@ -95,11 +104,11 @@ class OctocadModalViewController: UIViewController {
             )
         )
         primaryButton.setTitle(
-            "Visit Chesterlp40 account",
+            Helper.OctocadModalViewController.primaryButtonTitle,
             for: .normal
         )
         primaryButton.titleLabel?.font = UIFont(
-            name: "Rubik-Medium",
+            name: Helper.OctocadModalViewController.buttonTitleFont,
             size: 14
         )
         primaryButton.backgroundColor = UIColor.grain900
@@ -119,11 +128,11 @@ class OctocadModalViewController: UIViewController {
             )
         )
         secondaryButton.setTitle(
-            "Cancel",
+            Helper.OctocadModalViewController.secondaryButtonTitle,
             for: .normal
         )
         secondaryButton.titleLabel?.font = UIFont(
-            name: "Rubik-Medium",
+            name: Helper.OctocadModalViewController.buttonTitleFont,
             size: 14
         )
         secondaryButton.setTitleColor(
@@ -155,7 +164,7 @@ class OctocadModalViewController: UIViewController {
     
     @objc
     func openInAppBrowser() {
-        if let url = URL(string: "https://github.com/chesterlp40") {
+        if let url = URL(string: Helper.OctocadModalViewController.chesterlp40GithubUrl) {
             let safariViewController = SFSafariViewController(
                 url: url
             )

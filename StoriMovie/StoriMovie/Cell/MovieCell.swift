@@ -8,7 +8,6 @@
 import UIKit
 
 class MovieCell: UITableViewCell {
-    static let reuseIdentifier = "MovieCell"
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageMovie: UIImageView!
@@ -28,13 +27,17 @@ class MovieCell: UITableViewCell {
                 )
                 self.activityIndicatorView.stopAnimating()
             } catch {
-                self.imageMovie.image = UIImage(named: "wifi.exclamation")
+                self.imageMovie.image = UIImage(
+                    named: Helper.wifiExclamationResource
+                )
                 self.imageMovie.contentMode = .scaleAspectFit
                 self.activityIndicatorView.stopAnimating()
             }
         }
         self.titleMovieLabel.text = movie.title
-        self.releaseDateMovieLabel.text = "Released:\n\(movie.releaseDate)"
+        self.releaseDateMovieLabel.text = Helper.MovieCell.releasedDate(
+            movie.releaseDate
+        ) // "Released:\n\(movie.releaseDate)"
         self.imageMovie.layer.cornerRadius = 5
         self.layer.backgroundColor = UIColor.grain300.cgColor
         self.containerView.layer.backgroundColor = UIColor.grain100.cgColor

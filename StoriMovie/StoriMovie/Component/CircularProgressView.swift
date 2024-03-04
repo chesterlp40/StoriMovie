@@ -58,7 +58,7 @@ class CircularProgressView: UIView {
         duration: TimeInterval = 1.0
     ) {
         let animation = CABasicAnimation(
-            keyPath: "strokeEnd"
+            keyPath: Helper.CircularProgressView.strokeEndKeyPath // "strokeEnd"
         )
         animation.toValue = value
         animation.duration = duration
@@ -69,7 +69,7 @@ class CircularProgressView: UIView {
         animation.isRemovedOnCompletion = false
         self.progressLayer.add(
             animation,
-            forKey: "progressAnimation"
+            forKey: Helper.CircularProgressView.progressAnimationKey // "progressAnimation"
         )
         self.updateColor(
             for: value

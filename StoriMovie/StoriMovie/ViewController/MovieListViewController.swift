@@ -98,7 +98,7 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
-            withIdentifier: MovieCell.reuseIdentifier,
+            withIdentifier: Helper.MovieCell.reuseIdentifier,
             for: indexPath
         ) as! MovieCell
         let movie = self.viewModel.getMovie(
