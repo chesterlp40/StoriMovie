@@ -16,6 +16,7 @@
 		8692A66B2B93660F009105D8 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8692A66A2B93660F009105D8 /* Helper.swift */; };
 		8692A66E2B943CD8009105D8 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8692A66D2B943CD8009105D8 /* CircularProgressView.swift */; };
 		8692A6702B951CC5009105D8 /* OctocadModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8692A66F2B951CC5009105D8 /* OctocadModalViewController.swift */; };
+		8692A6722B9580AE009105D8 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8692A6712B9580AE009105D8 /* ImageViewModel.swift */; };
 		86EB7E272B92856700EBF28C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E262B92856700EBF28C /* AppDelegate.swift */; };
 		86EB7E292B92856700EBF28C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E282B92856700EBF28C /* SceneDelegate.swift */; };
 		86EB7E2B2B92856700EBF28C /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB7E2A2B92856700EBF28C /* MovieListViewController.swift */; };
@@ -60,6 +61,7 @@
 		8692A66A2B93660F009105D8 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		8692A66D2B943CD8009105D8 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		8692A66F2B951CC5009105D8 /* OctocadModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctocadModalViewController.swift; sourceTree = "<group>"; };
+		8692A6712B9580AE009105D8 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		86EB7E232B92856700EBF28C /* StoriMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoriMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EB7E262B92856700EBF28C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86EB7E282B92856700EBF28C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				86EB7E6B2B9295A300EBF28C /* MovieViewModel.swift */,
+				8692A6712B9580AE009105D8 /* ImageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8692A6722B9580AE009105D8 /* ImageViewModel.swift in Sources */,
 				8692A6702B951CC5009105D8 /* OctocadModalViewController.swift in Sources */,
 				8692A66B2B93660F009105D8 /* Helper.swift in Sources */,
 				86EB7E682B928F4100EBF28C /* RestClientService.swift in Sources */,

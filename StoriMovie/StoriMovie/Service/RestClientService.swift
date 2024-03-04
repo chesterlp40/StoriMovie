@@ -31,7 +31,7 @@ class RestClientService {
         }
     }
     
-    func fetchImages(
+    func fetchImage(
         with path: String
     ) async throws -> UIImage? {
         guard

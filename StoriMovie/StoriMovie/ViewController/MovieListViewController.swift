@@ -8,7 +8,7 @@
 import UIKit
 
 class MovieListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var viewModel = MovieViewModel()
+    private var viewModel = MovieViewModel()
     
     @IBOutlet weak var tableView: UITableView!
     

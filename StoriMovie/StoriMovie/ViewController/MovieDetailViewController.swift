@@ -17,6 +17,8 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var ratingMovieLabel: UILabel!
     @IBOutlet weak var ratingProgressView: CircularProgressView!
     
+    private var viewModel = ImageViewModel()
+    
     private var movie: Movie
     
     init?(
@@ -94,7 +96,7 @@ class MovieDetailViewController: UIViewController {
     private func fetchPosterAndSetImage() {
         Task {
             do {
-                self.posterMovie.image = try await RestClientService.shared.fetchImages(
+                self.posterMovie.image = try await self.viewModel.fetchImage(
                     with: self.movie.posterPath
                 )
                 self.posterMovie.contentMode = .scaleToFill

@@ -11,7 +11,7 @@ class URLRequestBuilder {
     private let moviesBaseURL = "https://api.themoviedb.org/3/movie/top_rated"
     private let imagesBaseURL = "https://image.tmdb.org/t/p/original"
     private let pageKey = "page"
-    private let token = "TOKEN"
+    private let token = "INSERT YOUR TOKEN HERE"
 
     private let timeOut = 10.0
     private var requestData: RequestData = .movieRequest

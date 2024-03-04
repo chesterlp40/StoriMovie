@@ -15,6 +15,8 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var titleMovieLabel: UILabel!
     @IBOutlet weak var releaseDateMovieLabel: UILabel!
     
+    private var viewModel = ImageViewModel()
+    
     func configure(
         with movie: Movie
     ) {
@@ -22,7 +24,7 @@ class MovieCell: UITableViewCell {
         self.activityIndicatorView.startAnimating()
         Task {
             do {
-                self.imageMovie.image = try await RestClientService.shared.fetchImages(
+                self.imageMovie.image = try await self.viewModel.fetchImage(
                     with: movie.backdropPath
                 )
                 self.activityIndicatorView.stopAnimating()
