@@ -9,6 +9,9 @@ import UIKit
 
 /// View controller to detailed expose of the movies.
 final class MovieDetailViewController: UIViewController {
+    private var viewModel = ImageViewModel()
+    private var movie: Movie
+    
     @IBOutlet weak var posterMovie: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var contentView: UIView!
@@ -17,10 +20,6 @@ final class MovieDetailViewController: UIViewController {
     @IBOutlet weak var releaseDateMovieLabel: UILabel!
     @IBOutlet weak var ratingMovieLabel: UILabel!
     @IBOutlet weak var ratingProgressView: CircularProgressView!
-    
-    private var viewModel = ImageViewModel()
-    
-    private var movie: Movie
     
     /// Initialize **MovieDetailViewController**.
     ///

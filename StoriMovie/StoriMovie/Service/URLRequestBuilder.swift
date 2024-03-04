@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Builder design pattern for construct **URLRequest** for **Movie** or **UIImaage**.
+/// Builder design pattern for construct **URLRequest** for **Movie** or **UIImage**.
 final class URLRequestBuilder {
     private let moviesBaseURL = "https://api.themoviedb.org/3/movie/top_rated"
     private let imagesBaseURL = "https://image.tmdb.org/t/p/original"

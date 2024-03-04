@@ -9,14 +9,13 @@ import UIKit
 
 /// Custom **UITableViewCell**.
 final class MovieCell: UITableViewCell {
+    private var viewModel = ImageViewModel()
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageMovie: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var titleMovieLabel: UILabel!
     @IBOutlet weak var releaseDateMovieLabel: UILabel!
-    
-    private var viewModel = ImageViewModel()
     
     /// Configure all components in cell.
     ///
