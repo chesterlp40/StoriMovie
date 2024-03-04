@@ -59,7 +59,7 @@ enum Helper {
     
     enum MovieDetailViewController {
         static let navigationTitleText = "Movie Detail View"
-        static let rightButonResourceName = "rectangle.portrait.and.arrow.forward.fill"
+        static let rightButonResourceName = "person.fill"
         static let detailViewControllerIdentifier = "MovieDetailViewController"
         
         static func releasedDate(
@@ -81,11 +81,11 @@ enum Helper {
         _ navigation: UINavigationController?
     ) {
         navigation?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.grain700,
+            NSAttributedString.Key.foregroundColor: UIColor(named: "Grain700") ?? .gray,
             NSAttributedString.Key.font: UIFont(name: "Rubik-SemiBold", size: 17) ?? UIFont.boldSystemFont(ofSize: 17)
         ]
         navigation?.navigationBar.isTranslucent = true
-        navigation?.navigationBar.tintColor = UIColor.grain800
-        navigation?.navigationBar.backgroundColor = UIColor.grain200
+        navigation?.navigationBar.tintColor = UIColor(named: "Grain800")
+        navigation?.navigationBar.backgroundColor = UIColor(named: "Grain200")
     }
 }
