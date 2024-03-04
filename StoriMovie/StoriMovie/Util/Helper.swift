@@ -46,6 +46,34 @@ enum Helper {
         }
     }
     
+    // MARK: - MovieListViewController Section
+    
+    enum MovieListViewController {
+        static let navigationTitleText = "Top Rated Movies"
+        static let storyboardName = "Main"
+        static let detailViewControllerIdentifier = "MovieDetailViewController"
+    }
+    
+    // MARK: - MovieDetailViewController Section
+    
+    enum MovieDetailViewController {
+        static let navigationTitleText = "Movie Detail View"
+        static let rightButonResourceName = "rectangle.portrait.and.arrow.forward.fill"
+        static let detailViewControllerIdentifier = "MovieDetailViewController"
+        
+        static func releasedDate(
+            _ date: String
+        ) -> String {
+            return "Released: \(date)"
+        }
+        
+        static func rated(
+            _ rate: String
+        ) -> String {
+            return "Rated: \(rate)%"
+        }
+    }
+    
     // MARK: - Navigation Section
 
     static func setNavigationConfig(

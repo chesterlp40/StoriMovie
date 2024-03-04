@@ -27,7 +27,7 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.refreshControl = refreshControl
-        self.navigationItem.title = "Top Rated Movies"
+        self.navigationItem.title = Helper.MovieListViewController.navigationTitleText
         self.view.backgroundColor = UIColor.grain200
         Helper.setNavigationConfig(
             self.navigationController
@@ -72,7 +72,9 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         )
 
         let errorImageView = UIImageView(
-            image: UIImage(named: "wifi.exclamation")
+            image: UIImage(
+                named: Helper.wifiExclamationResource
+            )
         )
         errorImageView.contentMode = .scaleAspectFit
         errorImageView.frame = CGRect(
@@ -128,11 +130,16 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         )
         let bundle = Bundle(for: MovieDetailViewController.self)
         let storyboard = UIStoryboard(
-            name: "Main",
+            name: Helper.MovieListViewController.storyboardName,
             bundle: bundle
         )
-        let movieDetailViewController = storyboard.instantiateViewController(identifier: "MovieDetailViewController") { coder in
-            MovieDetailViewController(coder: coder, movie: movie)
+        let movieDetailViewController = storyboard.instantiateViewController(
+            identifier: Helper.MovieListViewController.detailViewControllerIdentifier
+        ) { coder in
+            MovieDetailViewController(
+                coder: coder,
+                movie: movie
+            )
         }
         self.navigationController?.pushViewController(
             movieDetailViewController,

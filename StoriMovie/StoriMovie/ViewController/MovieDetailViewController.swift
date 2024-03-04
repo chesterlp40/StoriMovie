@@ -24,11 +24,17 @@ class MovieDetailViewController: UIViewController {
         movie: Movie
     ) {
         self.movie = movie
-        super.init(coder: coder)
+        super.init(
+            coder: coder
+        )
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(
+        coder: NSCoder
+    ) {
+        fatalError(
+            "init(coder:) has not been implemented"
+        )
     }
     
     override func viewDidLoad() {
@@ -37,13 +43,15 @@ class MovieDetailViewController: UIViewController {
     }
     
     private func setupAllComponents() {
-        self.navigationItem.title = "Movie Detail View"
+        self.navigationItem.title = Helper.MovieDetailViewController.navigationTitleText
         self.view.backgroundColor = UIColor.grain200
         Helper.setNavigationConfig(
             self.navigationController
         )
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "rectangle.portrait.and.arrow.forward.fill"),
+            image: UIImage(
+                systemName: Helper.MovieDetailViewController.rightButonResourceName
+            ),
             style: .plain,
             target: self,
             action: #selector(presentModal)
@@ -61,7 +69,9 @@ class MovieDetailViewController: UIViewController {
         self.contentView.layer.borderWidth = 2
         self.titleMovieLabel.text = self.movie.title
         self.overviewMovieLabel.text = self.movie.overview
-        self.releaseDateMovieLabel.text = "Released: \(self.movie.releaseDate)"
+        self.releaseDateMovieLabel.text = Helper.MovieDetailViewController.releasedDate(
+            self.movie.releaseDate
+        )
         self.setRating()
     }
     
@@ -70,7 +80,7 @@ class MovieDetailViewController: UIViewController {
         let index = stringDouble.index(stringDouble.startIndex, offsetBy: 1)
         stringDouble.remove(at: index)
         let percentSring = String(stringDouble.prefix(2))
-        self.ratingMovieLabel.text = "Rated: \(percentSring)%"
+        self.ratingMovieLabel.text = Helper.MovieDetailViewController.rated(percentSring)
         if let formattedValue = Double("0.\(stringDouble)") {
             self.ratingProgressView.animateProgress(
                 to: formattedValue,
@@ -91,7 +101,7 @@ class MovieDetailViewController: UIViewController {
                 self.activityIndicatorView.stopAnimating()
             } catch {
                 self.posterMovie.image = UIImage(
-                    named: "wifi.exclamation"
+                    named: Helper.wifiExclamationResource
                 )
                 self.posterMovie.contentMode = .scaleAspectFit
                 self.activityIndicatorView.stopAnimating()
