@@ -140,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				8692A66D2B943CD8009105D8 /* CircularProgressView.swift */,
-				8692A66F2B951CC5009105D8 /* OctocadModalViewController.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -230,6 +229,7 @@
 		86EB7E592B9285EC00EBF28C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8692A66F2B951CC5009105D8 /* OctocadModalViewController.swift */,
 				86EB7E2A2B92856700EBF28C /* MovieListViewController.swift */,
 				8692A6492B92DB7F009105D8 /* MovieDetailViewController.swift */,
 			);

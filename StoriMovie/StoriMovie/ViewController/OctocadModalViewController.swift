@@ -8,12 +8,16 @@
 import SafariServices
 import UIKit
 
+/// Custom Modal to present an information UIView.
 class OctocadModalViewController: UIViewController {
+    
+    /// View configuration.
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupAllComponents()
     }
     
+    /// Setup components.
     private func setupAllComponents() {
         self.view.backgroundColor = .clear
         self.view.isOpaque = false
@@ -57,7 +61,7 @@ class OctocadModalViewController: UIViewController {
             )
         )
         imageView.image = UIImage(
-            named: Helper.OctocadModalViewController.octocadKey // "octocad"
+            named: Helper.OctocadModalViewController.octocadKey
         )
         imageView.contentMode = .scaleToFill
         
@@ -69,7 +73,7 @@ class OctocadModalViewController: UIViewController {
                 height: 50
             )
         )
-        titleLabel.text = Helper.OctocadModalViewController.titleLabelText // "Enjoying the test?\n Visit my GitHub"
+        titleLabel.text = Helper.OctocadModalViewController.titleLabelText
         titleLabel.font = UIFont(
             name: Helper.OctocadModalViewController.titleFont,
             size: 17
@@ -86,7 +90,7 @@ class OctocadModalViewController: UIViewController {
                 height: 90
             )
         )
-        subtitleLabel.text = Helper.OctocadModalViewController.subTitleLabelText // "In my personal GitHub you can find a lot of test app to show you my developer skills."
+        subtitleLabel.text = Helper.OctocadModalViewController.subTitleLabelText
         subtitleLabel.font = UIFont(
             name: Helper.OctocadModalViewController.subTitleFont,
             size: 13
@@ -162,6 +166,7 @@ class OctocadModalViewController: UIViewController {
         )
     }
     
+    /// Open In App Browser instance for visit URL.
     @objc
     func openInAppBrowser() {
         if let url = URL(string: Helper.OctocadModalViewController.chesterlp40GithubUrl) {
@@ -178,7 +183,8 @@ class OctocadModalViewController: UIViewController {
         }
     }
     
-    @objc 
+    /// Dismiss presented view..
+    @objc
     func dismissModal() {
         self.dismiss(
             animated: true,

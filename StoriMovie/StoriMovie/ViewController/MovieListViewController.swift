@@ -7,16 +7,19 @@
 
 import UIKit
 
+/// View controller for show all the top rated movies with image and information.
 class MovieListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     private var viewModel = MovieViewModel()
     
     @IBOutlet weak var tableView: UITableView!
     
+    /// View configuration.
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupAllComponents()
     }
     
+    /// Setup components.
     private func setupAllComponents() {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(
@@ -41,7 +44,10 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    @objc 
+    /// Handle pull to refresh feature.
+    ///
+    /// - Parameter refreshControl: **UIRefreshControl**.
+    @objc
     func handleRefresh(
         _ refreshControl: UIRefreshControl
     ) {
@@ -56,6 +62,7 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         refreshControl.endRefreshing()
     }
     
+    /// Request data.
     func fetchData() async throws {
         try await self.viewModel.fetchData()
         DispatchQueue.main.async { [weak self] in
@@ -66,6 +73,9 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
+    /// Configure Error View.
+    ///
+    /// - Returns: **UIView**.
     func setupErrorView() -> UIView {
         let errorView = UIView(
             frame: self.tableView.bounds
@@ -88,6 +98,12 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         return errorView
     }
     
+    /// Numbers of rows in section.
+    ///
+    /// - Parameters:
+    ///   - tableView: **UITableView**.
+    ///   - section: **Int**.
+    /// - Returns: **Int**.
     func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
@@ -95,6 +111,12 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         return self.viewModel.movieCount
     }
     
+    /// Cell for row at index path.
+    ///
+    /// - Parameters:
+    ///   - tableView: **UITableView**.
+    ///   - indexPath: **IndexPath**.
+    /// - Returns: **UITableViewCell**.
     func tableView(
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
@@ -114,6 +136,12 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
+    /// Height for row at index path.
+    ///
+    /// - Parameters:
+    ///   - tableView: **UITableView**.
+    ///   - indexPath: **IndexPath**.
+    /// - Returns: **CGFloat**.
     func tableView(
         _ tableView: UITableView,
         heightForRowAt indexPath: IndexPath
@@ -121,6 +149,11 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         return 130
     }
     
+    /// Did select row at index path.
+    ///
+    /// - Parameters:
+    ///   - tableView: **UITableView**.
+    ///   - indexPath: **IndexPath**.
     func tableView(
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
@@ -151,6 +184,12 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         )
     }
     
+    /// Will display cell for row at index path.
+    ///
+    /// - Parameters:
+    ///   - tableView: **UITableView**.
+    ///   - cell: **UITableViewCell**.
+    ///   - indexPath: **IndexPath**.
     func tableView(
         _ tableView: UITableView,
         willDisplay cell: UITableViewCell,

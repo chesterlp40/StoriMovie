@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Helper Class for expose all the resources.
 enum Helper {
     
     // MARK: - Generic Resources Section

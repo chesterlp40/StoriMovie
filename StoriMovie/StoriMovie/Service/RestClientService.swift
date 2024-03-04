@@ -7,9 +7,14 @@
 
 import UIKit
 
+/// Rest Client Service for comunicate with API.
 class RestClientService {
     static let shared = RestClientService()
     
+    /// Request for **Movie**.
+    ///
+    /// - Parameter page: **Int**.
+    /// - Returns: **[Movie]**.
     func fetchMovies(
         page: Int
     ) async throws -> [Movie] {
@@ -31,6 +36,10 @@ class RestClientService {
         }
     }
     
+    /// Request for **UIImage**.
+    ///
+    /// - Parameter page: **String**.
+    /// - Returns: **UIImage**.
     func fetchImage(
         with path: String
     ) async throws -> UIImage? {
@@ -54,6 +63,10 @@ class RestClientService {
         return nil
     }
     
+    /// Parse information received from API.
+    ///
+    /// - Parameter data: **Data**.
+    /// - Returns: **T**.
     private func parse<T: Decodable>(
         _ data: Data
     ) throws -> T {
@@ -67,6 +80,7 @@ class RestClientService {
     }
 }
 
+/// Networking Errors.
 enum RestClientServiceError: Error {
     case invalidRequest
     case networkingError

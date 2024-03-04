@@ -7,7 +7,8 @@
 
 import UIKit
 
-class MovieCell: UITableViewCell {
+/// Custom **UITableViewCell**.
+final class MovieCell: UITableViewCell {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageMovie: UIImageView!
@@ -17,6 +18,9 @@ class MovieCell: UITableViewCell {
     
     private var viewModel = ImageViewModel()
     
+    /// Configure all components in cell.
+    ///
+    /// - Parameter movie: **Movie**.
     func configure(
         with movie: Movie
     ) {
@@ -39,7 +43,7 @@ class MovieCell: UITableViewCell {
         self.titleMovieLabel.text = movie.title
         self.releaseDateMovieLabel.text = Helper.MovieCell.releasedDate(
             movie.releaseDate
-        ) // "Released:\n\(movie.releaseDate)"
+        )
         self.imageMovie.layer.cornerRadius = 5
         self.layer.backgroundColor = UIColor.grain300.cgColor
         self.containerView.layer.backgroundColor = UIColor.grain100.cgColor

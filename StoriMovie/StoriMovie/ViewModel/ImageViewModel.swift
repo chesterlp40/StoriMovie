@@ -7,8 +7,13 @@
 
 import UIKit
 
+/// View Model asociated to **UIImage** model.
 class ImageViewModel {
     
+    /// Request data.
+    ///
+    /// - Parameter path: **String**.
+    /// - Returns: **UIImage**
     func fetchImage(
         with path: String
     ) async throws -> UIImage? {

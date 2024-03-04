@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Builder design pattern for construct **URLRequest** for **Movie** or **UIImaage**.
 class URLRequestBuilder {
     private let moviesBaseURL = "https://api.themoviedb.org/3/movie/top_rated"
     private let imagesBaseURL = "https://image.tmdb.org/t/p/original"
@@ -32,12 +33,19 @@ class URLRequestBuilder {
         case get = "GET"
     }
     
+    /// Initialize **URLRequestBuilder**.
+    ///
+    /// - Parameter requestData: **RequestData**.
     init(
         _ requestData: RequestData
     ) {
         self.requestData = requestData
     }
     
+    /// Set image path for **UIImage**.
+    ///
+    /// - Parameter imagePath: **String**.
+    /// - Returns: **URLRequestBuilder**.
     @discardableResult
     func setImagePath(
         _ imagePath: String
@@ -46,6 +54,10 @@ class URLRequestBuilder {
         return self
     }
     
+    /// Set page for **Movie**.
+    ///
+    /// - Parameter page: **Int**.
+    /// - Returns: **URLRequestBuilder**.
     @discardableResult
     func setPage(
         _ page: Int
@@ -54,6 +66,9 @@ class URLRequestBuilder {
         return self
     }
     
+    /// Build the **URLRequest**.
+    ///
+    /// - Returns: **URLRequest**.
     func build() -> URLRequest? {
         var urlString: String?
         switch self.requestData {

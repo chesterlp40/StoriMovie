@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// View controller to detailed expose of the movies.
 class MovieDetailViewController: UIViewController {
     @IBOutlet weak var posterMovie: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
@@ -21,6 +22,11 @@ class MovieDetailViewController: UIViewController {
     
     private var movie: Movie
     
+    /// Initialize **MovieDetailViewController**.
+    ///
+    /// - Parameters:
+    ///   - coder: **NSCoder**.
+    ///   - movie: **Movie**.
     init?(
         coder: NSCoder,
         movie: Movie
@@ -31,6 +37,9 @@ class MovieDetailViewController: UIViewController {
         )
     }
     
+    /// Initialize **MovieDetailViewController**.
+    ///
+    /// - Parameter coder: **NSCoder**.
     required init?(
         coder: NSCoder
     ) {
@@ -39,11 +48,13 @@ class MovieDetailViewController: UIViewController {
         )
     }
     
+    /// View configuration.
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupAllComponents()
     }
     
+    /// Setup components.
     private func setupAllComponents() {
         self.navigationItem.title = Helper.MovieDetailViewController.navigationTitleText
         self.view.backgroundColor = UIColor.grain200
@@ -77,6 +88,7 @@ class MovieDetailViewController: UIViewController {
         self.setRating()
     }
     
+    /// Formatting data to complete rating and progrees indicator.
     private func setRating() {
         var stringDouble = self.movie.voteAverage.description
         let index = stringDouble.index(stringDouble.startIndex, offsetBy: 1)
@@ -93,6 +105,7 @@ class MovieDetailViewController: UIViewController {
         }
     }
     
+    /// Request data and complete component.
     private func fetchPosterAndSetImage() {
         Task {
             do {
@@ -111,7 +124,9 @@ class MovieDetailViewController: UIViewController {
         }
     }
     
-    @objc func presentModal() {
+    /// Present modal.
+    @objc
+    func presentModal() {
         let modalViewController = OctocadModalViewController()
         modalViewController.modalPresentationStyle = .overCurrentContext
         self.present(

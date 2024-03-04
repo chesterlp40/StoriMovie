@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// View Model asociated to **Movie** model.
 class MovieViewModel {
     private var movies: [Movie] = []
     private var currentPage = 1
@@ -15,12 +16,17 @@ class MovieViewModel {
         return self.movies.count
     }
     
+    /// Obtain **Movie** about an index.
+    ///
+    /// - Parameter index: **Int**
+    /// - Returns: **Movie**
     func getMovie(
         at index: Int
     ) -> Movie {
         return self.movies[index]
     }
     
+    /// Request data.
     func fetchData() async throws {
         do {
             let newMovies = try await RestClientService.shared.fetchMovies(

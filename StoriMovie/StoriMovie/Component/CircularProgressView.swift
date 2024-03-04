@@ -7,10 +7,14 @@
 
 import UIKit
 
-class CircularProgressView: UIView {
+/// Custom Class for  ProgressView Component.
+final class CircularProgressView: UIView {
     
     private let progressLayer = CAShapeLayer()
     
+    /// Initialize **CircularProgressView**.
+    ///
+    /// - Parameter frame: **CGRect**.
     override init(
         frame: CGRect
     ) {
@@ -20,6 +24,9 @@ class CircularProgressView: UIView {
         self.setupCircularPath()
     }
     
+    /// Initialize **CircularProgressView**.
+    ///
+    /// - Parameter aDecoder: **NSCoder**.
     required init?(
         coder aDecoder: NSCoder
     ) {
@@ -29,6 +36,7 @@ class CircularProgressView: UIView {
         self.setupCircularPath()
     }
     
+    /// Setup configuration.
     private func setupCircularPath() {
         let circularPath = UIBezierPath(
             ovalIn: self.bounds
@@ -53,12 +61,17 @@ class CircularProgressView: UIView {
         )
     }
     
+    /// Animate the progress.
+    ///
+    /// - Parameters:
+    ///   - value: Value to finish.
+    ///   - duration: Time of the proccess,
     func animateProgress(
         to value: Double,
         duration: TimeInterval = 1.0
     ) {
         let animation = CABasicAnimation(
-            keyPath: Helper.CircularProgressView.strokeEndKeyPath // "strokeEnd"
+            keyPath: Helper.CircularProgressView.strokeEndKeyPath
         )
         animation.toValue = value
         animation.duration = duration
@@ -69,13 +82,16 @@ class CircularProgressView: UIView {
         animation.isRemovedOnCompletion = false
         self.progressLayer.add(
             animation,
-            forKey: Helper.CircularProgressView.progressAnimationKey // "progressAnimation"
+            forKey: Helper.CircularProgressView.progressAnimationKey
         )
         self.updateColor(
             for: value
         )
     }
     
+    /// Update **CircularProgressView** background color throgh the progress.
+    ///
+    /// - Parameter progress: Progress state.
     private func updateColor(
         for progress: Double
     ) {
