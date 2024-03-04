@@ -25,9 +25,9 @@ enum Helper {
     
     enum OctocadModalViewController {
         static let octocadKey = "octocad"
-        static let titleLabelText = "Enjoying the test?\n Visit my GitHub"
+        static let titleLabelText = "Enjoying the demo?\n Visit my GitHub"
         static let titleFont = "Rubik-SemiBold"
-        static let subTitleLabelText = "In my personal GitHub you can find a lot of test app to show you my developer skills."
+        static let subTitleLabelText = "There you'll find various repositories of test apps with differents themes."
         static let subTitleFont = "Rubik-Regular"
         static let primaryButtonTitle = "Visit Chesterlp40 account"
         static let secondaryButtonTitle = "Cancel"
