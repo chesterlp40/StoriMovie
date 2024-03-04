@@ -46,7 +46,7 @@ final class OctocadModalViewController: UIViewController {
             )
         )
         centralView.center = self.view.center
-        centralView.backgroundColor = UIColor(named: "Grain0")
+        centralView.backgroundColor = Helper.Color.grain0
         centralView.layer.cornerRadius = 12
         self.view.addSubview(
             centralView
@@ -78,7 +78,7 @@ final class OctocadModalViewController: UIViewController {
             name: Helper.OctocadModalViewController.titleFont,
             size: 17
         )
-        titleLabel.textColor = UIColor(named: "Grain900")
+        titleLabel.textColor = Helper.Color.grain900
         titleLabel.numberOfLines = 2
         titleLabel.textAlignment = .center
         
@@ -95,7 +95,7 @@ final class OctocadModalViewController: UIViewController {
             name: Helper.OctocadModalViewController.subTitleFont,
             size: 13
         )
-        subtitleLabel.textColor = UIColor(named: "Grain700")
+        subtitleLabel.textColor = Helper.Color.grain700
         subtitleLabel.numberOfLines = 0
         subtitleLabel.textAlignment = .center
         
@@ -115,7 +115,7 @@ final class OctocadModalViewController: UIViewController {
             name: Helper.OctocadModalViewController.buttonTitleFont,
             size: 14
         )
-        primaryButton.backgroundColor = UIColor(named: "Grain900")
+        primaryButton.backgroundColor = Helper.Color.grain900
         primaryButton.layer.cornerRadius = 20
         primaryButton.addTarget(
             self,
@@ -140,10 +140,10 @@ final class OctocadModalViewController: UIViewController {
             size: 14
         )
         secondaryButton.setTitleColor(
-            UIColor(named: "Grain900"),
+            Helper.Color.grain900,
             for: .normal
         )
-        secondaryButton.backgroundColor = UIColor(named: "Grain0")
+        secondaryButton.backgroundColor = Helper.Color.grain0
         secondaryButton.layer.cornerRadius = 20
         secondaryButton.addTarget(
             self,
@@ -173,8 +173,8 @@ final class OctocadModalViewController: UIViewController {
             let safariViewController = SFSafariViewController(
                 url: url
             )
-            safariViewController.preferredControlTintColor = UIColor(named: "Grain800")
-            safariViewController.preferredBarTintColor = UIColor(named: "Grain300")
+            safariViewController.preferredControlTintColor = Helper.Color.grain800
+            safariViewController.preferredBarTintColor = Helper.Color.grain300
             self.present(
                 safariViewController,
                 animated: true,

@@ -57,7 +57,7 @@ final class MovieDetailViewController: UIViewController {
     /// Setup components.
     private func setupAllComponents() {
         self.navigationItem.title = Helper.MovieDetailViewController.navigationTitleText
-        self.view.backgroundColor = UIColor(named: "Grain200")
+        self.view.backgroundColor = Helper.Color.grain200
         Helper.setNavigationConfig(
             self.navigationController
         )
@@ -73,12 +73,12 @@ final class MovieDetailViewController: UIViewController {
         self.activityIndicatorView.startAnimating()
         self.fetchPosterAndSetImage()
         self.posterMovie.layer.cornerRadius = 5
-        self.posterMovie.layer.borderColor = UIColor(named: "Grain400")?.cgColor
+        self.posterMovie.layer.borderColor = Helper.Color.grain400?.cgColor
         self.posterMovie.layer.borderWidth = 2
         self.posterMovie.contentMode = .scaleToFill
         self.posterMovie.clipsToBounds = true
         self.contentView.layer.cornerRadius = 5
-        self.contentView.layer.borderColor = UIColor(named: "Grain500")?.cgColor
+        self.contentView.layer.borderColor = Helper.Color.grain500?.cgColor
         self.contentView.layer.borderWidth = 2
         self.titleMovieLabel.text = self.movie.title
         self.overviewMovieLabel.text = self.movie.overview

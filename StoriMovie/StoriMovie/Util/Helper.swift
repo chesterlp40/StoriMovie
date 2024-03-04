@@ -10,6 +10,25 @@ import UIKit
 /// Helper Class for expose all the resources.
 enum Helper {
     
+    // MARK: - Color Resources Section
+    
+    enum Color {
+        static let grain0 = UIColor(named: "Grain0")
+        static let grain100 = UIColor(named: "Grain100")
+        static let grain200 = UIColor(named: "Grain200")
+        static let grain300 = UIColor(named: "Grain300")
+        static let grain400 = UIColor(named: "Grain400")
+        static let grain500 = UIColor(named: "Grain500")
+        static let grain600 = UIColor(named: "Grain600")
+        static let grain700 = UIColor(named: "Grain700")
+        static let grain800 = UIColor(named: "Grain800")
+        static let grain900 = UIColor(named: "Grain900")
+        
+        static let rateGreen = UIColor(named: "RateGreen")
+        static let rateYellow = UIColor(named: "RateYellow")
+        static let rateRed = UIColor(named: "RateRed")
+    }
+    
     // MARK: - Generic Resources Section
     
     static let wifiExclamationResource = "wifi.exclamation"
@@ -81,11 +100,11 @@ enum Helper {
         _ navigation: UINavigationController?
     ) {
         navigation?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor(named: "Grain700") ?? .gray,
+            NSAttributedString.Key.foregroundColor: Helper.Color.grain700 ?? .gray,
             NSAttributedString.Key.font: UIFont(name: "Rubik-SemiBold", size: 17) ?? UIFont.boldSystemFont(ofSize: 17)
         ]
         navigation?.navigationBar.isTranslucent = true
-        navigation?.navigationBar.tintColor = UIColor(named: "Grain800")
-        navigation?.navigationBar.backgroundColor = UIColor(named: "Grain200")
+        navigation?.navigationBar.tintColor = Helper.Color.grain800
+        navigation?.navigationBar.backgroundColor = Helper.Color.grain200
     }
 }

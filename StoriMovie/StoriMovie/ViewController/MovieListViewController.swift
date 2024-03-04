@@ -31,7 +31,7 @@ final class MovieListViewController: UIViewController, UITableViewDelegate, UITa
         self.tableView.delegate = self
         self.tableView.refreshControl = refreshControl
         self.navigationItem.title = Helper.MovieListViewController.navigationTitleText
-        self.view.backgroundColor = UIColor(named: "Grain200")
+        self.view.backgroundColor = Helper.Color.grain200
         Helper.setNavigationConfig(
             self.navigationController
         )

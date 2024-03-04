@@ -45,10 +45,10 @@ final class MovieCell: UITableViewCell {
             movie.releaseDate
         )
         self.imageMovie.layer.cornerRadius = 5
-        self.layer.backgroundColor = UIColor(named: "Grain300")?.cgColor
-        self.containerView.layer.backgroundColor = UIColor(named: "Grain100")?.cgColor
+        self.layer.backgroundColor = Helper.Color.grain300?.cgColor
+        self.containerView.layer.backgroundColor = Helper.Color.grain100?.cgColor
         self.containerView.layer.cornerRadius = 10
-        self.containerView.layer.borderColor = UIColor(named: "Grain400")?.cgColor
+        self.containerView.layer.borderColor = Helper.Color.grain400?.cgColor
         self.containerView.layer.borderWidth = 2
         self.containerView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
