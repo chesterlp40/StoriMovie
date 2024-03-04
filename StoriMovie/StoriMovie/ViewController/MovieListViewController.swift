@@ -104,7 +104,11 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         let movie = self.viewModel.getMovie(
             at: indexPath.row
         )
-        cell.configure(with: movie)
+        DispatchQueue.main.async {
+            cell.configure(
+                with: movie
+            )
+        }
         return cell
     }
     

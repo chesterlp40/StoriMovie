@@ -42,6 +42,12 @@ class MovieDetailViewController: UIViewController {
         Helper.setNavigationConfig(
             self.navigationController
         )
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "rectangle.portrait.and.arrow.forward.fill"),
+            style: .plain,
+            target: self,
+            action: #selector(presentModal)
+        )
         self.activityIndicatorView.hidesWhenStopped = true
         self.activityIndicatorView.startAnimating()
         self.fetchPosterAndSetImage()
@@ -84,10 +90,22 @@ class MovieDetailViewController: UIViewController {
                 self.posterMovie.contentMode = .scaleToFill
                 self.activityIndicatorView.stopAnimating()
             } catch {
-                self.posterMovie.image = UIImage(named: "wifi.exclamation")
+                self.posterMovie.image = UIImage(
+                    named: "wifi.exclamation"
+                )
                 self.posterMovie.contentMode = .scaleAspectFit
                 self.activityIndicatorView.stopAnimating()
             }
         }
+    }
+    
+    @objc func presentModal() {
+        let modalViewController = OctocadModalViewController()
+        modalViewController.modalPresentationStyle = .overCurrentContext
+        self.present(
+            modalViewController,
+            animated: true,
+            completion: nil
+        )
     }
 }
